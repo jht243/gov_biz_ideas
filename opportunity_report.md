@@ -2,7 +2,7 @@
 
 Total Opportunities Identified: 5
 
-## [72/100] Develop a compliance tracking tool for small independent businesses in California to manage workplace surveillance regulations.
+## [85/100] Develop a compliance tracking tool for small independent businesses in California to manage workplace surveillance regulations.
 **Target Market**: Small independent professional businesses in California, such as solo practitioners and small firms.
 
 **Problem**: Helps small business owners ensure compliance with new workplace surveillance regulations to avoid fines and legal issues.
@@ -13,7 +13,7 @@ Total Opportunities Identified: 5
 
 **Source Bill**: [California AB 1883](https://openstates.org/ca/bills/20252026/AB1883/) - Workplace surveillance tools. (Date: 2026-02-13)
 ---
-## [78/100] Develop a compliance tracking tool for small landlords and property managers in Florida.
+## [85/100] Develop a compliance tracking tool for small landlords and property managers in Florida.
 **Target Market**: Small landlords and property managers in Florida
 
 **Problem**: Helps landlords and property managers ensure compliance with water safety requirements to avoid fines and penalties.
@@ -24,7 +24,7 @@ Total Opportunities Identified: 5
 
 **Source Bill**: [Florida SB 658](https://openstates.org/fl/bills/2026/SB658/) - Water Safety Requirements for the Rental of Residential and Vacation Properties (Date: 2026-02-17)
 ---
-## [72/100] Develop a compliance management tool for small property managers and HOAs in Florida.
+## [85/100] Develop a compliance management tool for small property managers and HOAs in Florida.
 **Target Market**: Small property managers and homeowners' associations (HOAs) in Florida
 
 **Problem**: Helps property managers and HOAs manage and track compliance with new record-keeping and voting regulations to avoid fines.
@@ -46,7 +46,7 @@ Total Opportunities Identified: 5
 
 **Source Bill**: [Florida HB 465](https://flsenate.gov/Session/Bill/2026/465/ByCategory) - Community Association Management (Date: 2025-11-19T17:40:18.227217+00:00)
 ---
-## [8/100] Develop a complaint management and communication tool for homeowners' associations and parcel owners.
+## [85/100] Develop a complaint management and communication tool for homeowners' associations and parcel owners.
 **Target Market**: Homeowners' associations and parcel owners in Florida
 
 **Problem**: Facilitates efficient communication and complaint resolution between homeowners, associations, and regulatory bodies.

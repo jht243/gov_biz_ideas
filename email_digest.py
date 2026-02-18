@@ -40,6 +40,25 @@ def generate_digest():
 
 
 def _build_no_new_email(today, do_opps, maybe_opps):
+    # Build clean title lists
+    committed_html = ''
+    if do_opps:
+        committed_html = '<div style="text-align:left; margin-top:16px;">'
+        committed_html += '<div style="font-size:13px; color:#4fc3f7; font-weight:600; margin-bottom:10px;">👍 Your Committed Items</div>'
+        for o in do_opps:
+            title = o.get('summary', o.get('bill_title', ''))[:90]
+            committed_html += f'<div style="font-size:13px; color:#e0e8f0; padding:6px 0; border-bottom:1px solid #2a3744;">• {title}</div>'
+        committed_html += '</div>'
+
+    watchlist_html = ''
+    if maybe_opps:
+        watchlist_html = '<div style="text-align:left; margin-top:14px;">'
+        watchlist_html += '<div style="font-size:13px; color:#eab308; font-weight:600; margin-bottom:10px;">⭐ Your Watchlist</div>'
+        for o in maybe_opps:
+            title = o.get('summary', o.get('bill_title', ''))[:90]
+            watchlist_html += f'<div style="font-size:13px; color:#e0e8f0; padding:6px 0; border-bottom:1px solid #2a3744;">• {title}</div>'
+        watchlist_html += '</div>'
+
     return f"""<!DOCTYPE html>
 <html><head><meta charset="utf-8"></head>
 <body style="margin:0; padding:0; background-color:#0f1923; font-family:Arial, Helvetica, sans-serif;">
@@ -50,10 +69,15 @@ def _build_no_new_email(today, do_opps, maybe_opps):
     <h1 style="margin:0; font-size:24px; color:#4fc3f7; font-weight:700;">⚡ AlphaStream Daily Digest</h1>
   </td></tr>
   <tr><td style="padding:0 0 20px; font-size:14px; color:#7a8a9a;">{today}</td></tr>
-  <tr><td style="background-color:#1a2733; border-radius:12px; padding:24px; text-align:center;">
-    <div style="font-size:16px; color:#e0e8f0; margin-bottom:8px;">No new opportunities today.</div>
-    <div style="font-size:13px; color:#7a8a9a;">You have {len(do_opps)} committed and {len(maybe_opps)} on your watchlist.</div>
+  <tr><td style="background-color:#1a2733; border-radius:12px; padding:24px;">
+    <div style="font-size:16px; color:#e0e8f0; margin-bottom:4px; text-align:center;">No new opportunities today.</div>
+    {committed_html}
+    {watchlist_html}
   </td></tr>
+  <tr><td style="padding:16px 0; text-align:center;">
+    <a href="https://github.com/jht243/gov_biz_ideas" style="display:inline-block; background-color:#4fc3f7; color:#0f1923; font-weight:700; padding:10px 24px; border-radius:8px; text-decoration:none; font-size:13px;">View Dashboard →</a>
+  </td></tr>
+  <tr><td style="padding:4px 0; text-align:center; font-size:11px; color:#4a5568;">AlphaStream · Automated Legislative Intelligence</td></tr>
 </table></td></tr></table>
 </body></html>"""
 
