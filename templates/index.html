@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaStream | Opportunity Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Refined High-Legibility Dark Palette */
+            --bg: #0d0f14;
+            --surface: #161a22;
+            --surface-accent: #1e2530;
+            --border: rgba(255, 255, 255, 0.08);
+
+            /* Text - Using accessible contrast ratios */
+            --text-primary: #f1f5f9;
+            /* Off-white for less eye strain */
+            --text-secondary: #94a3b8;
+            --text-tertiary: #64748b;
+
+            /* Accents */
+            --brand: #38bdf8;
+            /* Sky blue */
+            --ranking: #fbbf24;
+            /* Amber */
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+
+            --glass: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Floating Nav Pill */
+        .floating-nav {
+            position: fixed;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 10px 6px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            max-height: 70vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+
+        .floating-nav::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        .floating-nav::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
+        }
+
+        .nav-dot {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-tertiary);
+            background: transparent;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .nav-dot:hover {
+            background: var(--surface-accent);
+            color: var(--brand);
+            border-color: var(--brand);
+        }
+
+        .nav-dot.active {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--brand);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+
+        .nav-dot .nav-tooltip {
+            display: none;
+            position: absolute;
+            right: calc(100% + 10px);
+            white-space: nowrap;
+            background: var(--surface-accent);
+            color: var(--text-primary);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 400;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            max-width: 220px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .nav-dot:hover .nav-tooltip {
+            display: block;
+        }
+
+        @media (max-width: 1100px) {
+            .floating-nav {
+                display: none;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.25s ease;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header-section {
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            text-align: left;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+        }
+
+        .tagline {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-top: 4px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            background-color: var(--surface-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .card-right-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .rank-badge {
+            flex-shrink: 0;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 100px;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            color: var(--ranking);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .meta-strip {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+            margin-bottom: 24px;
+        }
+
+        .state-tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--brand);
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .bill-link {
+            color: var(--brand);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 500;
+        }
+
+        .bill-link:hover {
+            color: #7dd3fc;
+            text-decoration: underline;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        @media (min-width: 640px) {
+            .content-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .content-item h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-tertiary);
+            margin: 0 0 8px 0;
+            font-weight: 600;
+        }
+
+        .content-item p {
+            margin: 0 0 12px 0;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .content-item p:last-child {
+            margin-bottom: 0;
+        }
+
+        .reasoning-panel {
+            background-color: rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .reasoning-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--brand);
+            margin-bottom: 12px;
+            font-weight: 600;
+            display: block;
+        }
+
+        .reasoning-text {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.7;
+        }
+
+        .actions {
+            display: flex;
+            gap: 6px;
+        }
+
+        .btn {
+            background: var(--surface-accent);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 38px;
+            height: 38px;
+            transition: transform 0.15s, background 0.15s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #2d3748;
+        }
+
+        .btn-do:hover,
+        .btn-do.active {
+            color: #fff;
+            background: var(--success);
+            border-color: var(--success);
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-maybe:hover,
+        .btn-maybe.active {
+            color: #fff;
+            background: var(--warning);
+            border-color: var(--warning);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-delete:hover {
+            color: #fff;
+            background: var(--danger);
+            border-color: var(--danger);
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+        }
+
+        /* Notes Section */
+        .notes-section {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            display: none;
+        }
+
+        .notes-section.visible {
+            display: block;
+        }
+
+        .notes-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+        }
+
+        .notes-textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .notes-textarea::placeholder {
+            color: var(--text-tertiary);
+        }
+
+        .notes-textarea:focus {
+            border-color: var(--brand);
+        }
+
+        .notes-saved {
+            font-size: 0.7rem;
+            color: var(--success);
+            margin-top: 6px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .notes-saved.show {
+            opacity: 1;
+        }
+
+        .status-pill {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 6px;
+            margin-left: 12px;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+
+        .pill-do {
+            background: var(--success);
+            color: white;
+        }
+
+        .pill-maybe {
+            background: var(--warning);
+            color: white;
+        }
+
+        /* Bill Lifecycle Status */
+        .bill-lifecycle-strip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .lifecycle-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .lifecycle-pending {
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .lifecycle-passed {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .lifecycle-signed {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.4);
+        }
+
+        .lifecycle-enacted {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .lifecycle-vetoed {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .lifecycle-failed {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .lifecycle-withdrawn {
+            background: rgba(163, 163, 163, 0.15);
+            color: #a3a3a3;
+            border: 1px solid rgba(163, 163, 163, 0.3);
+        }
+
+        .latest-action-text {
+            color: var(--text-tertiary);
+            font-size: 0.78rem;
+            font-style: italic;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            max-width: 900px;
+            margin: 0 auto 32px auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .filter-bar .label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-right: 4px;
+            white-space: nowrap;
+        }
+
+        .filter-select {
+            padding: 6px 32px 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2394a3b8'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            outline: none;
+        }
+
+        .filter-select:hover,
+        .filter-select:focus {
+            border-color: var(--brand);
+            color: var(--text-primary);
+        }
+
+        .filter-pill {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .filter-pill:hover {
+            border-color: var(--brand);
+            color: var(--text-primary);
+        }
+
+        .filter-pill.active {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: var(--brand);
+            color: var(--brand);
+        }
+
+        .filter-divider {
+            width: 1px;
+            height: 24px;
+            background: var(--border);
+            margin: 0 8px;
+            flex-shrink: 0;
+        }
+
+        /* Collapsible Reasoning */
+        .reasoning-panel {
+            margin-top: 24px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.8));
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: border-color 0.2s ease;
+        }
+
+        .reasoning-panel:hover {
+            border-color: rgba(56, 189, 248, 0.2);
+        }
+
+        .reasoning-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            cursor: pointer;
+            user-select: none;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 14px 20px;
+            transition: all 0.2s ease;
+        }
+
+        .reasoning-toggle:hover {
+            color: var(--brand);
+            background: rgba(56, 189, 248, 0.04);
+        }
+
+        .reasoning-toggle .toggle-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reasoning-toggle .toggle-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+            background: rgba(56, 189, 248, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            transition: all 0.25s ease;
+        }
+
+        .reasoning-toggle.open .toggle-icon {
+            background: rgba(56, 189, 248, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .reasoning-toggle .hint {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+        }
+
+        .reasoning-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+
+        .reasoning-body.open {
+            max-height: 2000px;
+        }
+
+        .reasoning-body-inner {
+            padding: 0 20px 20px 50px;
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: var(--text-secondary);
+        }
+
+        .reasoning-body-inner p {
+            margin-bottom: 12px;
+        }
+
+        /* Loading state */
+        .loading-skeleton {
+            background: linear-gradient(90deg, var(--surface) 25%, var(--surface-accent) 50%, var(--surface) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 20px;
+            height: 350px;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-section">
+        <h1>AlphaStream</h1>
+        <div class="tagline">Legislative intelligence and opportunity discovery.</div>
+    </div>
+
+    <div id="filter-bar" class="filter-bar" style="display:none;"></div>
+
+    <div id="main-container" class="container">
+        <div class="loading-skeleton"></div>
+        <div class="loading-skeleton" style="animation-delay: 0.1s"></div>
+    </div>
+
+    <script>
+        function formatParagraphs(text) {
+            if (!text) return '';
+            return text.split(/\n\n+/).map(p => `<p>${p.trim().replace(/\n/g, '<br>')}</p>`).join('');
+        }
+
+        // Global state
+        let allItems = [];
+        let activeStateFilter = 'all';
+        let activeStatusFilter = 'all'; // 'all', 'do', 'maybe'
+        let sortMode = 'score'; // 'score' or 'date'
+
+        async function loadData() {
+            try {
+                const res = await fetch('/api/opportunities');
+                allItems = await res.json();
+                buildFilterBar(allItems);
+                applyFiltersAndRender();
+            } catch (err) {
+                console.error("Data load error:", err);
+                document.getElementById('main-container').innerHTML = `
+                    <p style="text-align:center; color:var(--danger); padding:40px;">
+                        Connection to AlphaStream Engine suspended. Check local server status.
+                    </p>
+                `;
+            }
+        }
+
+        function buildFilterBar(items) {
+            const bar = document.getElementById('filter-bar');
+            const states = [...new Set(items.map(i => i.state))].sort();
+
+            bar.innerHTML = '';
+            bar.style.display = 'flex';
+
+            // State dropdown
+            const stateLabel = document.createElement('span');
+            stateLabel.className = 'label';
+            stateLabel.textContent = 'State';
+            bar.appendChild(stateLabel);
+
+            const stateSelect = document.createElement('select');
+            stateSelect.className = 'filter-select';
+            stateSelect.id = 'state-select';
+
+            const optAll = document.createElement('option');
+            optAll.value = 'all';
+            optAll.textContent = `All States (${items.length})`;
+            stateSelect.appendChild(optAll);
+
+            states.forEach(st => {
+                const count = items.filter(i => i.state === st).length;
+                const opt = document.createElement('option');
+                opt.value = st;
+                opt.textContent = `${st} (${count})`;
+                stateSelect.appendChild(opt);
+            });
+
+            stateSelect.addEventListener('change', (e) => { activeStateFilter = e.target.value; applyFiltersAndRender(); });
+            bar.appendChild(stateSelect);
+
+            // Divider
+            const div1 = document.createElement('div');
+            div1.className = 'filter-divider';
+            bar.appendChild(div1);
+
+            // Status label
+            const statusLabel = document.createElement('span');
+            statusLabel.className = 'label';
+            statusLabel.textContent = 'Status';
+            bar.appendChild(statusLabel);
+
+            // Status: All
+            const statusAll = document.createElement('div');
+            statusAll.className = 'filter-pill active';
+            statusAll.setAttribute('data-status', 'all');
+            statusAll.textContent = 'All';
+            statusAll.addEventListener('click', () => { activeStatusFilter = 'all'; applyFiltersAndRender(); });
+            bar.appendChild(statusAll);
+
+            // Status: Yes (thumbs up)
+            const statusYes = document.createElement('div');
+            statusYes.className = 'filter-pill';
+            statusYes.setAttribute('data-status', 'do');
+            statusYes.textContent = '👍 Yes';
+            statusYes.addEventListener('click', () => { activeStatusFilter = 'do'; applyFiltersAndRender(); });
+            bar.appendChild(statusYes);
+
+            // Status: Maybe (star)
+            const statusMaybe = document.createElement('div');
+            statusMaybe.className = 'filter-pill';
+            statusMaybe.setAttribute('data-status', 'maybe');
+            statusMaybe.textContent = '⭐ Maybe';
+            statusMaybe.addEventListener('click', () => { activeStatusFilter = 'maybe'; applyFiltersAndRender(); });
+            bar.appendChild(statusMaybe);
+
+            // Divider
+            const div2 = document.createElement('div');
+            div2.className = 'filter-divider';
+            bar.appendChild(div2);
+
+            // Sort label
+            const sortLabel = document.createElement('span');
+            sortLabel.className = 'label';
+            sortLabel.textContent = 'Sort';
+            bar.appendChild(sortLabel);
+
+            // Score sort
+            const scorePill = document.createElement('div');
+            scorePill.className = 'filter-pill active';
+            scorePill.setAttribute('data-sort', 'score');
+            scorePill.textContent = '↓ Ranking';
+            scorePill.addEventListener('click', () => { sortMode = 'score'; applyFiltersAndRender(); });
+            bar.appendChild(scorePill);
+
+            // Date sort
+            const datePill = document.createElement('div');
+            datePill.className = 'filter-pill';
+            datePill.setAttribute('data-sort', 'date');
+            datePill.textContent = '↓ Most Recent';
+            datePill.addEventListener('click', () => { sortMode = 'date'; applyFiltersAndRender(); });
+            bar.appendChild(datePill);
+        }
+
+        function applyFiltersAndRender() {
+            // Update state dropdown
+            const stateSelect = document.getElementById('state-select');
+            if (stateSelect) stateSelect.value = activeStateFilter;
+
+            // Update pill active states
+            document.querySelectorAll('#filter-bar .filter-pill').forEach(p => {
+                const so = p.getAttribute('data-sort');
+                const ss = p.getAttribute('data-status');
+                // Status pills
+                if (ss !== null) {
+                    p.classList.toggle('active', ss === activeStatusFilter);
+                }
+                // Sort pills
+                if (so !== null) {
+                    p.classList.toggle('active', so === sortMode);
+                }
+            });
+
+            let filtered = activeStateFilter === 'all' ? [...allItems] : allItems.filter(i => i.state === activeStateFilter);
+
+            // Status filter
+            if (activeStatusFilter !== 'all') {
+                filtered = filtered.filter(i => i.status === activeStatusFilter);
+            }
+
+            if (sortMode === 'score') {
+                filtered.sort((a, b) => (b.score || 0) - (a.score || 0));
+            } else {
+                filtered.sort((a, b) => {
+                    const da = a.bill_date || '';
+                    const db = b.bill_date || '';
+                    return db.localeCompare(da);
+                });
+            }
+
+            renderOpportunities(filtered);
+        }
+
+        function renderOpportunities(items) {
+            const container = document.getElementById('main-container');
+            container.innerHTML = '';
+
+            // Remove any existing floating nav
+            const existingNav = document.querySelector('.floating-nav');
+            if (existingNav) existingNav.remove();
+
+            if (!items || items.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; color: var(--text-tertiary); padding: 100px 0;">
+                        No opportunities match current filters. 
+                    </div>
+                `;
+                return;
+            }
+
+            // Build floating nav pill
+            const nav = document.createElement('div');
+            nav.className = 'floating-nav';
+            items.forEach((item, idx) => {
+                const dot = document.createElement('div');
+                dot.className = 'nav-dot';
+                dot.setAttribute('data-card-idx', idx);
+                dot.innerHTML = `${item.score}<span class="nav-tooltip">${item.score}/100 — ${(item.summary || '').substring(0, 50)}…</span>`;
+                dot.addEventListener('click', () => {
+                    const target = document.getElementById('card-' + idx);
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+                nav.appendChild(dot);
+            });
+            document.body.appendChild(nav);
+
+            // Intersection observer to highlight active nav dot
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const idx = entry.target.getAttribute('data-card-idx');
+                    const dot = nav.querySelector(`[data-card-idx="${idx}"]`);
+                    if (dot) {
+                        if (entry.isIntersecting) dot.classList.add('active');
+                        else dot.classList.remove('active');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            items.forEach((item, idx) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.id = 'card-' + idx;
+                card.setAttribute('data-card-idx', idx);
+                card.style.animationDelay = `${idx * 0.05}s`;
+                observer.observe(card);
+
+                card.innerHTML = `
+                    <div class="card-header">
+                        <h2 class="card-title">${item.summary}</h2>
+                        <div class="card-right-col">
+                            <div class="rank-badge">${item.score}/100 RANKING</div>
+                            <div class="actions">
+                                <button class="btn btn-do ${item.status === 'do' ? 'active' : ''}" onclick="submitAction('${item.bill_id}', '${item.state}', 'do', this)" title="Commit to Action">👍</button>
+                                <button class="btn btn-maybe ${item.status === 'maybe' ? 'active' : ''}" onclick="submitAction('${item.bill_id}', '${item.state}', 'maybe', this)" title="Save to Watchlist">⭐</button>
+                                <button class="btn btn-delete" onclick="submitAction('${item.bill_id}', '${item.state}', 'delete', this)" title="Dismiss Opportunity">👎</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="meta-strip">
+                        <span class="state-tag">${item.state}</span>
+                        <span>Bill ID: ${item.bill_id}</span>
+                        <span>•</span>
+                        <span>Bill Date: ${item.bill_date ? item.bill_date.split('T')[0] : 'N/A'}</span>
+                        <span>•</span>
+                        <a href="${item.link}" target="_blank" class="bill-link">
+                            View Data Source
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
+
+                    <div class="bill-lifecycle-strip">
+                        <span class="lifecycle-badge lifecycle-${(item.bill_status || 'Pending').toLowerCase().replace(/ /g, '-')}">
+                            ${item.bill_status || 'Pending'}
+                        </span>
+                        ${item.latest_action ? `<span class="latest-action-text">Latest: ${item.latest_action}${item.latest_action_date ? ' (' + item.latest_action_date + ')' : ''}</span>` : ''}
+                    </div>
+
+                    <div class="content-item" style="margin-bottom: 24px;">
+                        <h4>Legislation Overview</h4>
+                        <div style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary); max-width: 750px;">
+                            ${formatParagraphs(item.legislation_overview || item.bill_description)}
+                        </div>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="content-item">
+                            <h4>Target Market</h4>
+                            <p>${item.target_market}</p>
+                        </div>
+                        <div class="content-item">
+                            <h4>Problem Solved</h4>
+                            <p>${item.problem_solved}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reasoning-panel">
+                        <button class="reasoning-toggle" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                            <span class="toggle-left">
+                                <span class="toggle-icon">▶</span>
+                                Analysis Reasoning
+                            </span>
+                            <span class="hint">Click to expand</span>
+                        </button>
+                        <div class="reasoning-body">
+                            <div class="reasoning-body-inner">
+                                ${formatParagraphs(item.reasoning)}
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="notes-section ${(item.status === 'do' || item.status === 'maybe') ? 'visible' : ''}" data-notes-for="${item.bill_id}__${item.state}">
+                        <div class="notes-label">📝 My Notes</div>
+                        <textarea class="notes-textarea" placeholder="Add your thoughts, next steps, or research notes…" onblur="saveNotes('${item.bill_id}', '${item.state}', this)">${item.notes || ''}</textarea>
+                        <div class="notes-saved">✓ Saved</div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        async function submitAction(bill_id, state, action, button) {
+            // Immediately highlight the selected button
+            const actionGroup = button.closest('.actions');
+            actionGroup.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+            if (action !== 'delete') {
+                button.classList.add('active');
+            }
+
+            // Show/hide notes section
+            const card = button.closest('.card');
+            const notesSection = card.querySelector('.notes-section');
+            if (notesSection) {
+                if (action === 'do' || action === 'maybe') {
+                    notesSection.classList.add('visible');
+                } else {
+                    notesSection.classList.remove('visible');
+                }
+            }
+
+            try {
+                const res = await fetch('/api/action', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ bill_id, state, action })
+                });
+
+                if (res.ok) {
+                    const item = allItems.find(i => i.bill_id === bill_id && i.state === state);
+                    if (item) item.status = action;
+
+                    if (action === 'delete') {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        setTimeout(() => loadData(), 200);
+                    }
+                }
+            } catch (err) {
+                console.error("Action error:", err);
+                button.classList.remove('active');
+                button.style.borderColor = 'var(--danger)';
+            }
+        }
+
+        async function saveNotes(bill_id, state, textarea) {
+            const notes = textarea.value;
+            const savedIndicator = textarea.parentElement.querySelector('.notes-saved');
+            try {
+                const res = await fetch('/api/notes', {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ bill_id, state, notes })
+                });
+                if (res.ok) {
+                    // Update local data
+                    const item = allItems.find(i => i.bill_id === bill_id && i.state === state);
+                    if (item) item.notes = notes;
+                    // Flash saved indicator
+                    savedIndicator.classList.add('show');
+                    setTimeout(() => savedIndicator.classList.remove('show'), 2000);
+                }
+            } catch (err) {
+                console.error('Notes save error:', err);
+            }
+        }
+
+        // Run
+        setTimeout(loadData, 300);
+    </script>
+</body>
+
+</html>
