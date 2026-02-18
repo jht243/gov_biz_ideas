@@ -75,7 +75,7 @@ def _build_no_new_email(today, do_opps, maybe_opps):
     {watchlist_html}
   </td></tr>
   <tr><td style="padding:16px 0; text-align:center;">
-    <a href="https://github.com/jht243/gov_biz_ideas" style="display:inline-block; background-color:#4fc3f7; color:#0f1923; font-weight:700; padding:10px 24px; border-radius:8px; text-decoration:none; font-size:13px;">View Dashboard →</a>
+    <a href="https://gov-biz-ideas.onrender.com" style="display:inline-block; background-color:#4fc3f7; color:#0f1923; font-weight:700; padding:10px 24px; border-radius:8px; text-decoration:none; font-size:13px;">View Dashboard →</a>
   </td></tr>
   <tr><td style="padding:4px 0; text-align:center; font-size:11px; color:#4a5568;">AlphaStream · Automated Legislative Intelligence</td></tr>
 </table></td></tr></table>
@@ -127,7 +127,7 @@ def _build_new_items_email(today, new_opps, do_opps, maybe_opps):
 
     html += """
   <tr><td style="padding:20px 0; text-align:center;">
-    <a href="https://github.com/jht243/gov_biz_ideas" style="display:inline-block; background-color:#4fc3f7; color:#0f1923; font-weight:700; padding:12px 28px; border-radius:8px; text-decoration:none; font-size:14px;">Review on Dashboard →</a>
+    <a href="https://gov-biz-ideas.onrender.com" style="display:inline-block; background-color:#4fc3f7; color:#0f1923; font-weight:700; padding:12px 28px; border-radius:8px; text-decoration:none; font-size:14px;">Review on Dashboard →</a>
   </td></tr>
   <tr><td style="padding:8px 0; text-align:center; font-size:11px; color:#4a5568;">AlphaStream · Automated Legislative Intelligence</td></tr>
 </table></td></tr></table>
