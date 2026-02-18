@@ -412,15 +412,15 @@
 
         .notes-textarea {
             width: 100%;
-            min-height: 80px;
-            padding: 12px 14px;
+            min-height: 120px;
+            padding: 14px 16px;
             border-radius: 10px;
             border: 1px solid var(--border);
             background: var(--surface);
             color: var(--text-primary);
             font-family: inherit;
-            font-size: 0.85rem;
-            line-height: 1.5;
+            font-size: 0.9rem;
+            line-height: 1.6;
             resize: vertical;
             outline: none;
             transition: border-color 0.2s ease;
@@ -1038,22 +1038,6 @@
                         </div>
                     </div>
                     
-                    <div class="reasoning-panel">
-                        <button class="reasoning-toggle" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-                            <span class="toggle-left">
-                                <span class="toggle-icon">▶</span>
-                                Analysis Reasoning
-                            </span>
-                            <span class="hint">Click to expand</span>
-                        </button>
-                        <div class="reasoning-body">
-                            <div class="reasoning-body-inner">
-                                ${formatParagraphs(item.reasoning)}
-                            </div>
-                        </div>
-                    </div>
-
-
 
                     <div class="notes-section ${(item.status === 'do' || item.status === 'maybe') ? 'visible' : ''}" data-notes-for="${item.bill_id}__${item.state}">
                         <div class="notes-label">📝 My Notes</div>
