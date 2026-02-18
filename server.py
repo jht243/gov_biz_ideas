@@ -38,6 +38,19 @@ def get_opportunities():
     active_opps = [o for o in opps if o.get('status') != 'deleted']
     return jsonify(active_opps)
 
+@app.route('/api/mark-seen', methods=['POST'])
+def mark_seen():
+    """Mark all unseen items as seen. Called after user views the dashboard."""
+    opps = load_opportunities()
+    count = 0
+    for o in opps:
+        if o.get('status') != 'deleted' and not o.get('seen'):
+            o['seen'] = True
+            count += 1
+    if count > 0:
+        save_opportunities(opps)
+    return jsonify({"marked": count})
+
 @app.route('/api/action', methods=['POST'])
 def handle_action():
     data = request.json

@@ -305,7 +305,7 @@
     "bill_status": "Pending",
     "latest_action": "Now in Rules",
     "latest_action_date": "2026-02-04",
-    "status": "do",
+    "status": "deleted",
     "score_breakdown": {
       "market_size": 18,
       "conversion_ease": 16,

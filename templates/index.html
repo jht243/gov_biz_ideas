@@ -224,6 +224,32 @@
             white-space: nowrap;
         }
 
+        .new-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: #22c55e;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-right: 8px;
+            animation: pulse-new 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-new {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+        }
+
         .meta-strip {
             display: flex;
             flex-wrap: wrap;
@@ -749,6 +775,8 @@
                 allItems = await res.json();
                 buildFilterBar(allItems);
                 applyFiltersAndRender();
+                // Mark all items as seen after rendering
+                fetch('/api/mark-seen', { method: 'POST' });
             } catch (err) {
                 console.error("Data load error:", err);
                 document.getElementById('main-container').innerHTML = `
@@ -949,7 +977,7 @@
 
                 card.innerHTML = `
                     <div class="card-header">
-                        <h2 class="card-title">${item.summary}</h2>
+                        <h2 class="card-title">${!item.seen ? '<span class="new-badge">NEW</span>' : ''}${item.summary}</h2>
                         <div class="card-right-col">
                             <div class="rank-badge">${item.score}/100 RANKING</div>
                             <div class="actions">
