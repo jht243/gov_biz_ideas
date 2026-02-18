@@ -1,14 +1,13 @@
 [
   {
     "is_opportunity": true,
-    "score": 72,
+    "score": 85,
     "score_breakdown": {
-      "bolt_on": 18,
-      "complexity": 16,
-      "penalty": 18,
-      "payoff": 15,
-      "market": 5,
-      "reachability": 10
+      "market_size": 22,
+      "conversion_ease": 21,
+      "willingness_to_pay": 17,
+      "build_feasibility": 15,
+      "competitive_moat": 10
     },
     "summary": "Develop a compliance tracking tool for small independent businesses in California to manage workplace surveillance regulations.",
     "target_market": "Small independent professional businesses in California, such as solo practitioners and small firms.",
@@ -88,14 +87,13 @@
   },
   {
     "is_opportunity": true,
-    "score": 78,
+    "score": 85,
     "score_breakdown": {
-      "bolt_on": 18,
-      "complexity": 16,
-      "penalty": 18,
-      "payoff": 16,
-      "market": 8,
-      "reachability": 8
+      "market_size": 22,
+      "conversion_ease": 22,
+      "willingness_to_pay": 17,
+      "build_feasibility": 15,
+      "competitive_moat": 9
     },
     "summary": "Develop a compliance tracking tool for small landlords and property managers in Florida.",
     "target_market": "Small landlords and property managers in Florida",
@@ -118,14 +116,13 @@
   },
   {
     "is_opportunity": true,
-    "score": 72,
+    "score": 85,
     "score_breakdown": {
-      "bolt_on": 18,
-      "complexity": 16,
-      "penalty": 15,
-      "payoff": 14,
-      "market": 5,
-      "reachability": 4
+      "market_size": 22,
+      "conversion_ease": 21,
+      "willingness_to_pay": 20,
+      "build_feasibility": 15,
+      "competitive_moat": 7
     },
     "summary": "Develop a compliance management tool for small property managers and HOAs in Florida.",
     "target_market": "Small property managers and homeowners' associations (HOAs) in Florida",
@@ -252,11 +249,18 @@
     "bill_status": "Pending",
     "latest_action": "Added to Second Reading Calendar",
     "latest_action_date": "2026-02-12",
-    "status": "do"
+    "status": "do",
+    "score_breakdown": {
+      "market_size": 22,
+      "conversion_ease": 22,
+      "willingness_to_pay": 17,
+      "build_feasibility": 15,
+      "competitive_moat": 9
+    }
   },
   {
     "is_opportunity": true,
-    "score": 8,
+    "score": 85,
     "summary": "Develop a complaint management and communication tool for homeowners' associations and parcel owners.",
     "legislation_overview": "The legislation establishes an ombudsman office to oversee homeowners' associations in Florida, focusing on the management and resolution of complaints related to residential parcels. This creates an opportunity to develop software that streamlines communication and complaint management between homeowners, associations, and the ombudsman office.",
     "target_market": "Homeowners' associations and parcel owners in Florida",
@@ -273,11 +277,18 @@
     "bill_status": "Pending",
     "latest_action": "Introduced",
     "latest_action_date": "2026-01-13",
-    "status": "do"
+    "status": "do",
+    "score_breakdown": {
+      "market_size": 25,
+      "conversion_ease": 21,
+      "willingness_to_pay": 16,
+      "build_feasibility": 15,
+      "competitive_moat": 8
+    }
   },
   {
     "is_opportunity": true,
-    "score": 7,
+    "score": 72,
     "summary": "Develop a digital documentation and compliance tool for builders and homeowners in Florida to streamline proof submission for sewage system permits.",
     "legislation_overview": "The legislation removes the requirement for builders and homeowners to obtain construction permits from the Department of Environmental Protection for certain residences, instead requiring them to provide proof to local authorities. This creates an opportunity to develop a software tool that helps these stakeholders manage and submit the necessary documentation efficiently.",
     "target_market": "Builders and homeowners in Florida constructing residences with onsite sewage systems",
@@ -294,6 +305,13 @@
     "bill_status": "Pending",
     "latest_action": "Now in Rules",
     "latest_action_date": "2026-02-04",
-    "status": "deleted"
+    "status": "do",
+    "score_breakdown": {
+      "market_size": 18,
+      "conversion_ease": 16,
+      "willingness_to_pay": 14,
+      "build_feasibility": 13,
+      "competitive_moat": 11
+    }
   }
 ]

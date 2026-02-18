@@ -117,59 +117,84 @@ class OpportunityAnalyzer:
         State: {bill.get('state')}
         Description: {description}
         
-        CRITERIA FOR OPPORTUNITY:
-        1. **Bolt-on Solution**: Can be addressed with a standalone software tool (no core system replacement).
-        2. **Complexity**: Too complex for a small business owner to handle manually (requires tracking, scheduling, document generation, or regulatory interpretation).
-        3. **Market Size**: Serves a fragmented market with >10,000 potential small business clients.
-        4. **Reachability**: Decision-makers are the business owners themselves — easy to identify and reach.
-        5. **Penalty**: Clear non-compliance penalty (fines, license revocation, lawsuits, loss of insurance).
-        6. **Payoff**: Saves the owner real time/money or prevents a costly penalty.
-
         CRITICAL EXCLUSIONS — Score 0 and set is_opportunity to false for ANY of these:
         - **Government Mandates**: Requirements for state agencies, departments, counties, or municipalities.
-        - **Large Institution Mandates**: Requirements for universities, colleges, school districts, hospital systems, or large corporations. These organizations have their own internal tech/compliance teams.
+        - **Large Institution Mandates**: Requirements for universities, colleges, school districts, hospital systems, or large corporations with their own compliance teams.
         - **B2G (Business to Government)**: We do NOT sell to the government.
         - **Pure Appropriations/Funding**: Bills that just allocate money without a compliance requirement.
-        - **Enterprise-Only**: Regulations that only affect companies with >500 employees, Fortune 500 companies, or publicly traded corporations.
+        - **Enterprise-Only**: Regulations that only affect companies with >500 employees or corporations.
         - **Internal Government Operations**: Bills about how government agencies should run themselves.
 
-        SCORING RUBRIC — Score EACH category independently. Do NOT default to 75.
-        
-        You MUST score each dimension separately and then SUM them. The total is the sum of these 6 individual scores:
-        - **Bolt-on Feasibility (0-20 pts)**: 18-20 = Pure standalone SaaS, zero integration. 10-17 = Needs some config. 1-9 = Requires deep integration. 0 = Not feasible.
-        - **Complexity (0-20 pts)**: 18-20 = Ongoing tracking, AI rules, document generation. 10-17 = Moderate tracking. 1-9 = One-time simple task. 0 = Trivial.
-        - **Clear Penalty (0-20 pts)**: 18-20 = Heavy fines, license revocation, lawsuits. 10-17 = Moderate fines. 1-9 = Minor consequences. 0 = No penalty.
-        - **High Payoff/ROI (0-20 pts)**: 18-20 = Saves $10k+/year or prevents catastrophic loss. 10-17 = Saves meaningful time. 1-9 = Nice-to-have. 0 = No value.
-        - **Market Size (0-10 pts)**: 9-10 = >100k affected businesses. 5-8 = 10k-100k. 1-4 = <10k. 0 = Tiny niche.
-        - **Reachability (0-10 pts)**: 9-10 = Easy to find via licensing boards/associations. 5-8 = Findable with effort. 1-4 = Hard to reach. 0 = Impossible.
+        ═══════════════════════════════════════════════════════
+        SCORING RUBRIC — 100 POINTS TOTAL
+        Score EACH of the 5 categories independently, then SUM.
+        ═══════════════════════════════════════════════════════
+
+        1. TARGET MARKET SIZE (0–25 pts)
+           How many small businesses are directly affected by this regulation?
+           22-25 = Massive (>100k businesses nationwide in this trade/profession)
+           15-21 = Large (25k-100k businesses)
+           8-14  = Medium (5k-25k businesses)
+           1-7   = Small (<5k businesses)
+           0     = No real market / targets government or large corps
+
+        2. EASE OF CLIENT CONVERSION (0–25 pts)
+           How easy is it to find, reach, and sell to these business owners?
+           22-25 = Can reach via licensing boards, trade associations, or industry lists. Owner is the buyer. No committee approval needed.
+           15-21 = Reachable through industry channels. Owner makes buying decisions but may need some convincing.
+           8-14  = Harder to identify. May need channel partners or referrals.
+           1-7   = Very fragmented, no clear channel. Hard to reach decision-makers.
+           0     = Unreachable or buyer is a committee/board.
+
+        3. WILLINGNESS TO PAY (0–20 pts)
+           Will these business owners actually spend money on this?
+           17-20 = Strong financial pressure — non-compliance means heavy fines ($5k+), license revocation, lawsuits, or loss of insurance. Tool pays for itself 10x.
+           11-16 = Moderate pressure — meaningful fines or operational headaches. Clear ROI.
+           5-10  = Some pressure — minor fines or inconvenience. ROI is arguable.
+           1-4   = Weak pressure — mostly voluntary or one-time hassle.
+           0     = No penalty or consequence for non-compliance.
+
+        4. BUILD FEASIBILITY (0–15 pts)
+           Can we build this as a simple, standalone SaaS tool?
+           13-15 = Pure standalone web app. No integrations needed. Forms, tracking, document generation, alerts.
+           9-12  = Mostly standalone but needs some data sources or light integrations.
+           5-8   = Needs meaningful integrations with existing systems.
+           1-4   = Requires deep integration, hardware, or complex infrastructure.
+           0     = Not feasible as software.
+
+        5. COMPETITIVE MOAT (0–15 pts)
+           Is this a fresh opportunity or is there already a crowded market?
+           13-15 = Brand new regulation, no existing tools, first-mover advantage.
+           9-12  = Few or no direct competitors. Existing tools don't specifically address this.
+           5-8   = Some competitors exist but room for a better/simpler product.
+           1-4   = Crowded market with established players.
+           0     = Fully commoditized, no differentiation possible.
 
         MANDATORY GATE: Score 0 total if the target is government, universities, large hospitals, or corporations with >500 employees.
-        
-        IMPORTANT — ANTI-ANCHORING RULES:
+
+        ANTI-ANCHORING RULES:
         - Do NOT default to 75. That is lazy scoring.
-        - A truly excellent opportunity should score 85-95. A mediocre one should score 40-60.
-        - Most bills should score BELOW 60 (not an opportunity). Only truly compelling ones score above.
-        - You MUST calculate each of the 6 sub-scores independently, then SUM them to get the total.
-        - Show your sub-scores in the reasoning.
+        - A truly excellent opportunity should score 80-95. A good one 65-79. A mediocre one 40-60.
+        - Most bills should score BELOW 55 (not an opportunity). Only truly compelling ones score above 60.
+        - You MUST calculate each of the 5 sub-scores independently, then SUM them.
 
         OUTPUT FORMAT (JSON):
         {{
             "is_opportunity": boolean, // True ONLY if total score > 60 AND target is small business
-            "score": integer, // MUST equal the SUM of bolt_on + complexity + penalty + payoff + market + reachability
+            "score": integer, // MUST equal the SUM of all 5 category scores
             "score_breakdown": {{
-                "bolt_on": integer,
-                "complexity": integer,
-                "penalty": integer,
-                "payoff": integer,
-                "market": integer,
-                "reachability": integer
+                "market_size": integer,       // 0-25
+                "conversion_ease": integer,   // 0-25
+                "willingness_to_pay": integer, // 0-20
+                "build_feasibility": integer,  // 0-15
+                "competitive_moat": integer    // 0-15
             }},
             "summary": "One sentence: what tool we'd build and for whom (name the specific profession/trade)",
             "legislation_overview": "2-3 sentences in plain English. First explain what the new regulation requires and who it affects. Then explain the business opportunity — what tool could be built to help small businesses comply, and why they'd pay for it. Write this for a non-technical business reader.",
             "target_market": "Be specific: e.g. 'Independent HVAC contractors in California' not just 'businesses'",
             "problem_solved": "What pain does this solve for the small business owner?",
             "compliance_trigger": "What specific rule requires this?",
-            "reasoning": "Multi-paragraph explanation. MUST START with the score breakdown table: Bolt-on: X/20, Complexity: X/20, Penalty: X/20, Payoff: X/20, Market: X/10, Reachability: X/10 = TOTAL. Then explain each score."
+            "reasoning": "Start with score breakdown: Market Size: X/25, Conversion Ease: X/25, Willingness to Pay: X/20, Build Feasibility: X/15, Competitive Moat: X/15 = TOTAL/100. Then explain each score in 1-2 sentences."
         }}
         
         REMEMBER: If the bill primarily targets universities, K-12 school districts, government agencies, 
