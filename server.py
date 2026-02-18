@@ -101,5 +101,6 @@ def save_notes():
     return jsonify({"error": "Opportunity not found"}), 404
 
 if __name__ == '__main__':
-    print("Starting Web UI on http://localhost:5001")
-    app.run(port=5001, debug=True)
+    port = int(os.environ.get('PORT', 5001))
+    print(f"Starting Web UI on http://localhost:{port}")
+    app.run(host='0.0.0.0', port=port, debug=False)
