@@ -101,13 +101,33 @@ class OpportunityAnalyzer:
         for SMALL INDEPENDENT PROFESSIONAL BUSINESSES — the kind of operators who are making good money 
         but have NO tech team and NO IT department.
         
-        OUR IDEAL CUSTOMER PROFILE:
-        - Solo practitioners and small firms: lawyers, accountants, CPAs, bookkeepers
-        - Licensed trades: plumbers, electricians, HVAC/AC repair, contractors, roofers
-        - Healthcare independents: private practice doctors, dentists, chiropractors, optometrists, therapists
-        - Property: HOAs, property managers, small landlords, real estate agents
-        - Design/Build professionals: architects, engineers, surveyors, interior designers
-        - Other small businesses: auto repair shops, salons, restaurants, daycares, pest control
+        OUR IDEAL CUSTOMER PROFILE — Licensed professionals and small businesses in these categories:
+        - Architecture & Interior Design
+        - Asbestos Contractors & Consultants
+        - Auctioneers
+        - Barbers & Cosmetology
+        - Building Code Administrators & Inspectors
+        - Certified Public Accountants (CPAs)
+        - Community Association Managers (HOAs, condos, cooperatives)
+        - Construction Industry (general contractors, specialty contractors)
+        - Electrical Contractors
+        - Engineers
+        - Farm Labor contractors
+        - Geologists
+        - Home Inspectors
+        - Landscape Architecture
+        - Lodging (hotels, motels, vacation rentals)
+        - Mobile Homes (dealers, installers, manufacturers)
+        - Mold-Related Services (assessors, remediators)
+        - Real Estate (agents, brokers, appraisers)
+        - Restaurants & Food Service
+        - Talent Agencies & Athlete Agents
+        - Timeshare operators
+        - Veterinary Medicine
+        - Yacht and Ship (dealers, brokers, manufacturers)
+        - Drugs, Devices and Cosmetics (pharmacies, small manufacturers)
+        - Elevator contractors and inspectors
+        - Employee Leasing Companies
         
         These are people who are BUSY running their business, NOT tech-savvy, and will pay for a 
         simple tool that handles compliance for them so they don't get fined.

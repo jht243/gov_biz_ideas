@@ -1,0 +1,59 @@
+name: Daily Bill Tracker
+
+on:
+  schedule:
+    # 12:00 PM EST = 17:00 UTC
+    - cron: '0 17 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  run-tracker:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Run bill tracker pipeline
+        env:
+          OPENSTATES_API_KEY: ${{ secrets.OPENSTATES_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python3 main.py 2>&1 | tee pipeline_output.txt
+      
+      - name: Generate email digest
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python3 email_digest.py
+      
+      - name: Send email notification
+        if: hashFiles('digest.html') != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "AlphaStream Daily Digest — New Legislative Opportunities"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          html_body: file://digest.html
+      
+      - name: Commit updated data
+        run: |
+          git config user.name "AlphaStream Bot"
+          git config user.email "bot@alphastream.dev"
+          git add opportunities.json analysis_cache.json todays_report.md opportunity_report.md 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Daily pipeline run: $(date +%Y-%m-%d)"
+          git push
