@@ -10,6 +10,14 @@ from cache import BillCache
 # Configuration defaults
 DEFAULT_KEYWORDS = ["AI", "Artificial Intelligence", "Crypto", "Blockchain", "Privacy", "Environment", "Carbon"]
 DEFAULT_STATES = ["CA", "NY", "TX", "FL", "IL", "PA", "NV", "DE", "TN"]
+ALL_STATES = [
+    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+    "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
+    "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
+    "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
+    "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
+]
+STATE_BATCH_SIZE = 5
 
 def run_tracker(mock_mode=False, output_file="todays_report.md"):
     print(f"--- State Law Tracker Job: {datetime.datetime.now()} ---")
@@ -24,36 +32,103 @@ def run_tracker(mock_mode=False, output_file="todays_report.md"):
     bill_filter = BillFilter(keywords=DEFAULT_KEYWORDS)
     bill_cache = BillCache()
 
-    # 1. Fetch
-    print("Fetching new bills...")
-    all_bills = []
-    
-    if mock_mode:
-         all_bills = fetcher.fetch_new_bills(mock=True)
-         print(f"Fetched {len(all_bills)} bills (Mock).")
-    else:
-        states_to_check = DEFAULT_STATES
-        
-        for state in states_to_check:
-            print(f"  Checking {state}...")
-            state_bills = fetcher.fetch_new_bills(state=state, limit=20) 
-            print(f"    - Found {len(state_bills)} bills in {state}.")
-            all_bills.extend(state_bills)
-            
-    print(f"Total fetched: {len(all_bills)} bills.")
+    # Load previously saved opportunities so we can detect whether we've
+    # found anything genuinely new for the email digest.
+    json_path = os.path.join(os.getcwd(), 'opportunities.json')
+    old_opps = []
+    if os.path.exists(json_path):
+        try:
+            with open(json_path) as f:
+                old_opps = json.load(f)
+        except Exception:
+            old_opps = []
 
-    # 2. Filter bills
-    print(f"Filtering for keywords: {DEFAULT_KEYWORDS}")
-    relevant_bills = bill_filter.filter_bills(all_bills)
-    print(f"Found {len(relevant_bills)} relevant bills.")
+    preserved = {}       # bills with do/maybe — keep exactly as-is
+    dismissed = set()    # bills with deleted — never show again
+    for old in old_opps:
+        key = (old.get('bill_id', ''), old.get('state', ''))
+        status = old.get('status', '')
+        if status in ('do', 'maybe'):
+            preserved[key] = old
+        elif status == 'deleted':
+            dismissed.add(key)
 
-    # 3. Analyze Opportunities (AI Layer) — with cache to avoid re-analyzing
+    # 0. Initialize analyzer once (shared across all batches)
     openai_api_key = os.environ.get("OPENAI_API_KEY")
     if not openai_api_key:
         print("Note: OPENAI_API_KEY not found. Running Analyzer in MOCK mode.")
-    
     analyzer = OpportunityAnalyzer(api_key=openai_api_key)
-    opportunities = analyzer.analyze_bills(relevant_bills, cache=bill_cache)
+
+    # 1. Fetch
+    print("Fetching new bills...")
+    all_bills = []
+    relevant_bills = []
+    opportunities = []
+
+    if mock_mode:
+        all_bills = fetcher.fetch_new_bills(mock=True)
+        print(f"Fetched {len(all_bills)} bills (Mock).")
+
+        print(f"Filtering for keywords: {DEFAULT_KEYWORDS}")
+        relevant_bills = bill_filter.filter_bills(all_bills)
+        print(f"Found {len(relevant_bills)} relevant bills.")
+
+        opportunities = analyzer.analyze_bills(relevant_bills, cache=bill_cache)
+    else:
+        states_to_check = DEFAULT_STATES + [s for s in ALL_STATES if s not in DEFAULT_STATES]
+        print(f"Will scan up to {len(states_to_check)} states total in batches of {STATE_BATCH_SIZE}.")
+
+        for i in range(0, len(states_to_check), STATE_BATCH_SIZE):
+            batch = states_to_check[i:i + STATE_BATCH_SIZE]
+            batch_number = (i // STATE_BATCH_SIZE) + 1
+            print(f"  Batch {batch_number}: {', '.join(batch)}")
+
+            batch_bills = []
+            for state in batch:
+                print(f"    Checking {state}...")
+                state_bills = fetcher.fetch_new_bills(state=state, limit=20)
+                print(f"      - Found {len(state_bills)} bills in {state}.")
+                batch_bills.extend(state_bills)
+
+            all_bills.extend(batch_bills)
+
+            batch_relevant = bill_filter.filter_bills(batch_bills)
+            relevant_bills.extend(batch_relevant)
+            print(f"    Relevant bills this batch: {len(batch_relevant)}")
+
+            if not batch_relevant:
+                continue
+
+            batch_opportunities = analyzer.analyze_bills(batch_relevant, cache=bill_cache)
+            opportunities.extend(batch_opportunities)
+
+            # "Useful for email" = not already user-committed and not deleted.
+            new_for_email = [
+                opp for opp in batch_opportunities
+                if (opp.get('bill_id', ''), opp.get('state', '')) not in preserved
+                and (opp.get('bill_id', ''), opp.get('state', '')) not in dismissed
+            ]
+            if new_for_email:
+                print(
+                    f"Found {len(new_for_email)} new email-eligible opportunities. "
+                    "Stopping early instead of scanning more states."
+                )
+                break
+        else:
+            print("Scanned all 50 states and found no new opportunities for email.")
+
+    print(f"Total fetched: {len(all_bills)} bills.")
+
+    # De-duplicate opportunities by (bill_id, state) while preserving order.
+    deduped_opportunities = []
+    seen_opp_keys = set()
+    for opp in opportunities:
+        key = (opp.get('bill_id', ''), opp.get('state', ''))
+        if key in seen_opp_keys:
+            continue
+        seen_opp_keys.add(key)
+        deduped_opportunities.append(opp)
+    opportunities = deduped_opportunities
     
     # Save cache after analysis
     bill_cache.save()
@@ -70,53 +145,42 @@ def run_tracker(mock_mode=False, output_file="todays_report.md"):
         opportunity_path = os.path.join(os.getcwd(), 'opportunity_report.md')
         generate_opportunity_report(opportunities, opportunity_path)
         print(f"Opportunity Analysis generated: {opportunity_path}")
-        
-        json_path = os.path.join(os.getcwd(), 'opportunities.json')
-        
+
         # RULE: User-classified bills are immutable.
         #  - "do" / "maybe" bills are ALWAYS kept, even if pipeline doesn't find them again
         #  - "deleted" bills are NEVER re-added, even if pipeline finds them again
         #  - Only brand-new, unclassified bills from the pipeline get appended
-        old_opps = []
-        if os.path.exists(json_path):
-            try:
-                with open(json_path) as f:
-                    old_opps = json.load(f)
-            except Exception:
-                old_opps = []
-        
-        # Build sets for classified bills
-        preserved = {}      # bills with do/maybe — keep exactly as-is
-        dismissed = set()    # bills with deleted — never show again
-        for old in old_opps:
-            key = (old.get('bill_id',''), old.get('state',''))
-            status = old.get('status', '')
-            if status in ('do', 'maybe'):
-                preserved[key] = old
-            elif status == 'deleted':
-                dismissed.add(key)
-        
+
         # Start with all preserved (do/maybe) bills
         final = list(preserved.values())
-        
+
         # Add new pipeline results — only if not already classified
         for opp in opportunities:
-            key = (opp.get('bill_id',''), opp.get('state',''))
+            key = (opp.get('bill_id', ''), opp.get('state', ''))
             if key in preserved:
                 continue   # already keeping the user's version
             if key in dismissed:
                 continue   # user said no, don't bring it back
             final.append(opp)
-        
+
         # Also keep deleted entries in the file so we remember the dismissals
         for old in old_opps:
-            key = (old.get('bill_id',''), old.get('state',''))
+            key = (old.get('bill_id', ''), old.get('state', ''))
             if old.get('status') == 'deleted':
                 final.append(old)
-        
+
+        new_count = 0
+        for opp in opportunities:
+            key = (opp.get('bill_id', ''), opp.get('state', ''))
+            if key not in preserved and key not in dismissed:
+                new_count += 1
+
         with open(json_path, 'w') as f:
             json.dump(final, f, indent=2)
-        print(f"Opportunities JSON saved: {json_path} ({len(preserved)} preserved, {len(dismissed)} dismissed, {len(final) - len(preserved) - len(dismissed)} new)")
+        print(
+            f"Opportunities JSON saved: {json_path} "
+            f"({len(preserved)} preserved, {len(dismissed)} dismissed, {new_count} new)"
+        )
 
 def generate_opportunity_report(opportunities, filepath):
     with open(filepath, 'w') as f:

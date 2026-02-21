@@ -1,433 +1,448 @@
-# Daily Legislative Report: 2026-02-17
+# Daily Legislative Report: 2026-02-21
 
-Total Matches: 53
+Total Matches: 59
 
-## [CALIFORNIA] AB 1902: Secure youth treatment facilities.
-**Description**: Existing law requires a probation department to request that the prosecuting attorney petition the committing court for an order directing that a person confined in a secure youth treatment facility remain subject to the control of the department at the time of discharge if the person confined is determined to be physically dangerous to the public because of the person's mental or physical condition, disorder, or other problem that causes the person to have serious difficulty controlling their dangerous behavior. Existing law establishes the process for the petition, probable cause hearing, trial, continued detention, and appeal pursuant to this provision.
+## [CALIFORNIA] AB 2592: Lobbyist training.
+**Description**: Existing law requires the legislative ethics committee of each house of the Legislature to conduct at least semiannually an orientation course on the relevant ethical issues and laws related to lobbying, in consultation with the Fair Political Practices Commission. Existing law requires the committees to impose fees on lobbyists for attending these courses, as specified.
 
-Under existing law, if an order for continued detention is made pursuant to these provisions, the probation department has continued control over the person, except as specified, and existing law requires the department to, within 2 years after the date of the order made by a juvenile court or after conviction in criminal proceedings, file a new application for continued detention if continued detention is deemed necessary.
+This bill would state the intent of the Legislature to enact subsequent legislation that transfers the duty to provide state lobbyist ethics training from the legislative ethics committee of each house of the Legislature to the Fair Political Practices Commission, to be offered on an on-demand basis.
 
-This bill would require, if a petition is filed pursuant to these provisions, that the person who is the subject of the petition remain in custody in a secure youth treatment facility until the conclusion of the proceedings. The bill would prohibit a probable cause hearing pursuant to these provisions from being continued, except upon a showing of good cause by the party requesting the continuance. The bill would also authorize the court to base the finding of probable cause on certain hearsay statements, as specified.
+**Bill Date**: 2026-02-20
 
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ca/bills/20252026/AB1902/)
+[Link to Bill](https://openstates.org/ca/bills/20252026/AB2592/)
 ---
-## [CALIFORNIA] AB 1957: Mortgages: foreclosure.
-**Description**: Existing law generally regulates foreclosures of real property under the power of sale contained in the mortgage or deed of trust. Existing law prohibits a trustee from bundling properties for the purpose of sale, instead requiring each property to bid on separately, unless the deed of trust or mortgage requires otherwise.
+## [CALIFORNIA] AB 2290: Civil discovery: oral depositions: transcriptions.
+**Description**: Existing law requires the testimony at a deposition recorded by stenographic means to be transcribed, and requires stenographic notes of depositions to be retained by the reporter for not less than 8 years from the date of the deposition if no transcript is produced.
 
-Existing law imposes certain restrictions on a trustee's sale of real property containing one to 4 residential units. Specifically, existing law provides tenants of that property, prospective owner-occupants, and specified nonprofit housing entities 45 days to purchase the property before a sale to any other bidder becomes final, as specified. If one of those specified nonprofit housing entities purchases the property pursuant to that provision, existing law requires the property to be subject to a recorded covenant that requires the property be sold at an affordable housing cost or rented at an affordable rent for lower income households, as specified.
+This bill would make technical, nonsubstantive changes to these provisions.
 
-Under existing law, the above-described prohibition on bundling properties for sale and the above-described provisions relating to the sale of those specified residential properties are repealed on January 1, 2031.
+**Bill Date**: 2026-02-20
 
-This bill would instead repeal these provisions on January 1, 2027. The bill would also make technical conforming changes.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ca/bills/20252026/AB1957/)
+[Link to Bill](https://openstates.org/ca/bills/20252026/AB2290/)
 ---
-## [CALIFORNIA] AB 1956: Suicide prevention.
-**Description**: Existing law authorizes the State Department of Public Health to establish the Office of Suicide Prevention within the department. Existing law authorizes the office, if established, to perform certain functions, including, among others, conducting state-level assessment of regional and statewide suicide prevention policies and practices and reporting on progress to reduce rates of suicide. Existing law authorizes the office, if established, to focus activities on groups with the highest risk, including youth, Native American youth, older adults, veterans, and LGBTQ people.
+## [CALIFORNIA] AB 2642: Prisons: employment of inmates.
+**Description**: Existing law requires every able-bodied prisoner imprisoned in a state prison to work as many hours of faithful labor in each day and every day during their term of imprisonment as prescribed by the Secretary of the Department of Corrections and Rehabilitation in departmental rules and regulations.
 
-This bill would authorize the office's activities focused on youth to pay special attention to boys. The bill would additionally authorize the office to focus activities on young men. The bill would require the office, if established, to report to the Legislature, on or before July 1, 2028, on strategies to implement the activities focused on boys and young men.
+This bill would make technical, nonsubstantive changes to that provision.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2026-02-20
 
-[Link to Bill](https://openstates.org/ca/bills/20252026/AB1956/)
+[Link to Bill](https://openstates.org/ca/bills/20252026/AB2642/)
 ---
-## [CALIFORNIA] AB 1883: Workplace surveillance tools.
-**Description**: Existing law establishes the Division of Labor Standards Enforcement within the Department of Industrial Relations. Existing law authorizes the division, which is headed by the Labor Commissioner, to enforce the Labor Code and all labor laws of the state, the enforcement of which is not specifically vested in any other officer, board, or commission.
+## [CALIFORNIA] SB 1295: Energy storage systems: procurement.
+**Description**: Existing law requires the Public Utilities Commission to determine appropriate targets, if any, for each load-serving entity, as defined, to procure viable and cost-effective energy storage systems to be achieved by December 31, 2020. Existing law requires the commission to direct the state's 3 largest electrical corporations to file applications for programs and investments to accelerate widespread deployment of distributed energy storage systems.
 
-This bill would generally regulate the use of workplace surveillance tools and an employer's use of worker data. The bill would prohibit an employer from using certain workplace surveillance tools, including a workplace surveillance tool that incorporates facial, gait, or emotion recognition technology, except as specified. The bill would also prohibit an employer from using a workplace surveillance tool to infer specified categories of information about a worker, including, among others, their veteran status, ancestral history, religious beliefs, or disability status. The bill would require the Labor Commissioner to enforce the bill's provisions, would authorize an employee to bring a civil action for specified remedies for a violation of the bill's provisions, and would authorize a public prosecutor to enforce the provisions.
+This bill would require the commission, in addition to the requirements described above, on or before January 1, 2030, to consider procurement strategies for the installation of a statewide total of up to 40,000 megawatts of energy storage systems. As part of the procurement strategies considered by the commission, the bill would require the commission to consider appropriate targets, if any, for load-serving entities to procure viable and cost-effective energy storage systems, to be achieved on or before December 31, 2040. If the commission imposes an energy storage system procurement target on load-serving entities, the bill would authorize each load-serving entity to meet up to 50% of its procurement target through energy storage systems that it owns, that are interconnected at the transmission or distribution level, or that are located on the customer side of the meter, as specified. The bill would require the commission to reconsider procurement strategies and appropriate targets not less than once every 3 years.
 
-**Bill Date**: 2026-02-13
+Under existing law, a violation of any order, decision, rule, direction, demand, or requirement of the commission is a crime.
 
-[Link to Bill](https://openstates.org/ca/bills/20252026/AB1883/)
----
-## [CALIFORNIA] SB 1073: Black Cultural District Voluntary Tax Contribution Fund.
-**Description**: Existing law allows an individual taxpayer to contribute amounts in excess of their personal income tax liability for the support of specified funds and accounts, including, among others, to the Native California Wildlife Rehabilitation Voluntary Tax Contribution Fund.
-
-This bill would allow an individual to designate on their tax return that a specified amount in excess of their tax liability be transferred to the Black Cultural District Voluntary Tax Contribution Fund, which would be created by this bill, the funds of which would be available upon appropriation. The bill would require the Franchise Tax Board to revise the tax return form to include a space for the designation of contributions to the fund. The bill would make these provisions operative only until January 1, 2031, as specified.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ca/bills/20252026/SB1073/)
----
-## [CALIFORNIA] ACR 138: California Association of Future Farmers of America.
-**Description**: This measure would recognize and commend the California Association of Future Farmers of America for its nearly 100 years of service to students, educators, and the agricultural industry and would honor members, advisors, alumni, and supporters of the association for their dedication to developing future leaders and sustaining California's agricultural legacy.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ca/bills/20252026/ACR138/)
----
-## [CALIFORNIA] AB 1938: Coastal recreation: designated state surfing reserves.
-**Description**: The California Coastal Act of 1976 requires oceanfront land suitable for recreational use to be protected for recreational use and development unless present and foreseeable future demand for public or commercial recreational activities that could be accommodated on the property is already adequately provided for in the area. Existing law, the California Ocean Protection Act, establishes the Ocean Protection Council and provides that the purpose of the act is to integrate and coordinate the state's laws and institutions responsible for protecting and conserving ocean resources, including coastal waters and ocean ecosystems, to provide for public access to the ocean and ocean resources, including to marine protected areas, for recreational use, and aesthetic, educational, and scientific purposes, consistent with the sustainable long-term conservation of those resources, among other objectives. Existing law establishes surfing as the official state sport.
-
-This bill would require, on or before July 1, 2027, the council to establish criteria and an application process for purposes of designating an area of the coastline as a state surfing reserve, as defined. The bill would authorize a local government to, after adopting a formal resolution, apply to the council for purposes of designating an area of the coastline within the jurisdiction of the local government as a state surfing reserve. The bill would require the local government to include in its application, among other things, a description of the proposed surfing reserve.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ca/bills/20252026/AB1938/)
----
-## [CALIFORNIA] SB 1101: Postsecondary education: sharing personal information: notice.
-**Description**: Existing law establishes the California State University, under the administration of the Trustees of the California State University, the University of California, under the administration of the Regents of the University of California, the California Community Colleges, under the administration of the Board of Governors of the California Community Colleges, and independent institutions of higher education as the 4 segments of postsecondary education in the state. Existing federal law establishes the Office for Civil Rights within the United States Department of Education and authorizes the office to collect and coordinate the collection of data necessary to ensure compliance with civil rights laws, as provided.
-
-This bill would require the trustees, the governing board of a community college district, and an independent institution of higher education, and request the regents, (1) to notify to faculty, staff, and students if their personal information is shared with the United States Department of Education's Office for Civil Rights when the request for personal information is made as part of an investigative, compliance, or enforcement action, and (2) to only share personal information of faculty, staff, and students with the United States Department of Education's Office for Civil Rights if that sharing of personal information is required by federal or state law. The bill would require the notification to describe the specific types of personal information shared.
-
-By imposing new duties on community college districts, the bill would impose a state-mandated local program. The bill would make its provisions severable.
+Because a violation of a commission action implementing the bill's requirements would be a crime, this bill would impose a state-mandated local program.
 
 The California Constitution requires the state to reimburse local agencies and school districts for certain costs mandated by the state.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2026-02-20
 
-[Link to Bill](https://openstates.org/ca/bills/20252026/SB1101/)
+[Link to Bill](https://openstates.org/ca/bills/20252026/SB1295/)
 ---
-## [CALIFORNIA] SB 1053: Property taxation: transfer of base year value: disaster relief.
-**Description**: Existing property tax law provides, pursuant to a requirement of the California Constitution, that the property tax base year value of real property that is substantially damaged or destroyed by a disaster, as declared by the Governor, may be transferred to a comparable property located within the same county that is acquired or newly constructed, or to replacement property reconstructed on the site of the damaged or destroyed property, within 5 years after the disaster as a replacement property.
+## [CALIFORNIA] AB 2239: Infrastructure-constrained energization areas: energization timelines: environmental review.
+**Description**: Existing law vests the Public Utilities Commission (PUC) with regulatory authority over public utilities, including electrical corporations. Existing law requires the PUC to establish reasonable average and maximum target energization time periods, as defined, and a procedure for customers to report energization delays to the PUC, as provided. Existing law requires the PUC to require an electrical corporation to take remedial actions necessary to achieve the PUC's targets.
 
-This bill would authorize the county board of supervisors of any county proclaimed by the Governor to be in a state of emergency, or otherwise determined or declared by the Governor to be in a state of disaster, on or after January 1, 2026, but before January 1, 2031, to extend both of the above-described time periods to transfer by up to 3 years. The bill would apply to the determination of base year values for lien dates occurring on or after January 1, 2026, and before January 1, 2031.
+This bill would require the PUC to require each electrical corporation to meet energization timelines or targets established pursuant to the above-described provisions or by PUC order. The bill would require the PUC to impose a penalty if an electrical corporation fails to meet an energization timeline or target approved or required by the PUC, as provided.
 
-Existing law requires the state to reimburse local agencies annually for certain property tax revenues lost as a result of any exemption or classification of property for purposes of ad valorem property taxation.
+This bill would require the PUC to designate an infrastructure-constrained energization area based on objective criteria, including limited distribution or transmission infrastructure relative to available electrical capacity or projected load growth, inland or desert geography, and extended energization timelines. The bill would require the PUC to adopt rules authorizing over-the-fence transactions within infrastructure-constrained energization areas when an electrical corporation cannot reasonably meet energization targets and other specific conditions are met, as specified.
 
-This bill would provide that, notwithstanding those provisions, no appropriation is made and the state shall not reimburse local agencies for property tax revenues lost by them pursuant to the bill.
+**Bill Date**: 2026-02-20
 
-This bill would take effect immediately as a tax levy.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ca/bills/20252026/SB1053/)
+[Link to Bill](https://openstates.org/ca/bills/20252026/AB2239/)
 ---
-## [CALIFORNIA] AB 1889: Protective orders.
-**Description**: Existing law allows the court to issue a protective order restraining a defendant from any contact with the victim if the defendant has been convicted of a crime of domestic violence, human trafficking, a crime in furtherance of a criminal street gang, or a registerable sex offense.
+## [CALIFORNIA] AB 2284: Vehicles: electric bicycles.
+**Description**: Under existing law, the Department of the California Highway Patrol is responsible for enforcement of all laws regulating the operation of vehicles and use of the highways, as specified. Existing law requires the department to develop, on or before September 1, 2023, statewide safety and training programs based on evidence-based practices for users of electric bicycles, as defined, including, but not limited to, general electric bicycle riding safety, emergency maneuver skills, rules of the road, and laws pertaining to electric bicycles.
 
-Under existing law, the protective order may be valid for up to 10 years, as determined by the court.
+This bill would require, on or before June 1, 2027, the department, in partnership with biking nonprofit groups, to compile a list of electric bicycles and electric bicycle products that do not comply with statutory and regulatory requirements for the labeling or advertising of electric bicycles or electric bicycle products. The bill would require the department to make the list available on its internet website and to update the list and internet website, when necessary.
 
-This bill would authorize those orders to be valid for up to 10 years, or 2 years after the person's release from the state prison or a county jail, whichever is later.
+**Bill Date**: 2026-02-20
 
-By extending the duration of protective orders, a violation of which is punishable as a crime, this bill would impose a state-mandated local program.
-
-The California Constitution requires the state to reimburse local agencies and school districts for certain costs mandated by the state. Statutory provisions establish procedures for making that reimbursement.
-
-This bill would provide that no reimbursement is required by this act for a specified reason.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ca/bills/20252026/AB1889/)
+[Link to Bill](https://openstates.org/ca/bills/20252026/AB2284/)
 ---
-## [CALIFORNIA] SB 1066: Unclaimed property.
-**Description**: The Unclaimed Property Law provides that intangible personal property escheats to the state if certain enumerated conditions for escheat exist, as specified, unless otherwise provided by law.
+## [CALIFORNIA] AB 2572: Public postsecondary education: California State University.
+**Description**: Existing law states the intent of the Legislature that public programs of postsecondary education be made available to qualified persons throughout the state, including areas of substantial existing or projected population that are isolated from a campus of the California State University. Existing law requires the Trustees of the California State University to consider establishing a permanent, state-supported off-campus center on state-owned property in the County of Contra Costa, the purpose of which is to continue to offer education programs at the upper division and graduate levels.
 
-This bill would make a technical, nonsubstantive change to that provision.
+This bill would make nonsubstantive changes to this provision.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2026-02-20
 
-[Link to Bill](https://openstates.org/ca/bills/20252026/SB1066/)
+[Link to Bill](https://openstates.org/ca/bills/20252026/AB2572/)
 ---
-## [CALIFORNIA] SB 1070: Crimes: disturbing religious worship.
-**Description**: Existing law makes it a crime to intentionally disturb or disquiet an assemblage of people met for religious worship by profane discourse, rude or indecent behavior, or by any unnecessary noise. Existing law makes a violation of this crime a misdemeanor punishable by a fine not exceeding $1,000, by imprisonment in a county jail for a period not exceeding one year, or by both that fine and imprisonment.
+## [CALIFORNIA] AB 2528: Community colleges: governing board member compensation.
+**Description**: Existing law establishes the California Community Colleges, administered by the Board of Governors of the California Community Colleges, as one of the segments of public postsecondary education in the state. Existing law establishes community college districts throughout the state under the administration of community college district governing boards. Existing law requires the governing board of each community college district to establish, maintain, operate, and govern one or more community colleges, as provided. Existing law authorizes the compensation of board members that actually attend all meetings held by the governing board, not to exceed a specified amount from $120 to $1,500, inclusive, based on the number of full-time equivalent students in the community college district, as provided.
 
-This bill would additionally make a violation of the above-described crime a felony punishable by a fine not exceeding $5,000, by imprisonment in a county jail for 16 months, or 2 or 3 years, or by both that fine and imprisonment. By making an existing crime punishable as either a misdemeanor or a felony, the bill would impose a state-mandated local program.
+This bill would increase the authorized compensation for community college governing board members that actually attend all meetings held by the governing board, not to exceed a specified amount from $600 to $4,500, inclusive, based on the number of full-time equivalent students in the community college district, as provided.
 
-The California Constitution requires the state to reimburse local agencies and school districts for certain costs mandated by the state. Statutory provisions establish procedures for making that reimbursement.
+**Bill Date**: 2026-02-20
 
-This bill would provide that no reimbursement is required by this act for a specified reason.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ca/bills/20252026/SB1070/)
+[Link to Bill](https://openstates.org/ca/bills/20252026/AB2528/)
 ---
-## [NEW YORK] S 956: Establishes an affordable independent senior housing assistance program
-**Description**: Establishes an affordable independent senior housing assistance program which shall provide grants within amounts appropriated or otherwise available therefor to affordable independent senior housing properties to establish and operate resident assistance programs.
+## [CALIFORNIA] AB 2392: Postsecondary education: artificial intelligence.
+**Description**: Existing law establishes the California Community Colleges, under the administration of the Board of Governors of the California Community Colleges, the California State University, under the administration of the Trustees of the California State University, the University of California, under the administration of the Regents of the University of California, independent institutions of higher education, as defined, and private postsecondary educational institutions, as defined, as the segments of postsecondary education in the state.
 
-**Bill Date**: 2026-02-13
+This bill would state the intent of the Legislature to enact future legislation relating to artificial intelligence in postsecondary education.
 
-[Link to Bill](https://openstates.org/ny/bills/2025-2026/S956/)
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/ca/bills/20252026/AB2392/)
 ---
-## [NEW YORK] S 9205: Relates to requirements for the appointment of a guardian for personal needs or property management
-**Description**: Provides for requirements for the appointment of a guardian for personal needs or property management. Requires financial institutions to provide all necessary bank statements for a Medicaid application to a requesting department of social services within thirty days of having received such request.
+## [CALIFORNIA] SB 1316: Occupational Safety and Health.
+**Description**: Existing law establishes the Division of Occupational Safety and Health within the Department of Industrial Relations and sets forth its powers and duties related to protection of the life, safety, and health of employees. Existing law, the California Occupational Safety and Health Act of 1973, establishes various requirements relating to investigations and complaints of unsafe conditions of employment. Existing law requires the division to annually compile and release data relating to those complaints and citations.
 
-**Bill Date**: 2026-02-13
+This bill would additionally require the division to annually report that data to the Legislature and Governor's office.
 
-[Link to Bill](https://openstates.org/ny/bills/2025-2026/S9205/)
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/ca/bills/20252026/SB1316/)
 ---
-## [NEW YORK] A 7291: Relates to food safety and quality date labelling requirements
-**Description**: Requires certain labelling to be used to indicate the safety dates and quality dates of food items. Requires the department of agriculture and markets to educate consumers about such provisions.
-
-**Bill Date**: 2026-02-11
-
-[Link to Bill](https://openstates.org/ny/bills/2025-2026/A7291/)
----
-## [NEW YORK] A 8605: Authorizes the commissioner of taxation and finance to establish segment special equalization rates for certain school districts
-**Description**: Authorizes the commissioner of taxation and finance to establish segment special equalization rates starting in fiscal year 2025 for the Amityville Union Free School District and Farmingdale Union Free School District for the segments of the districts in the towns of Babylon and Oyster Bay.
-
-**Bill Date**: 2026-01-07
-
-[Link to Bill](https://openstates.org/ny/bills/2025-2026/A8605/)
----
-## [NEW YORK] A 9503: Provides for the restriction of substances in menstrual products
-**Description**: Restricts certain substances from being used in menstrual products. Relates to the effectiveness of such provisions.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ny/bills/2025-2026/A9503/)
----
-## [NEW YORK] A 7530: Establishes a spending cap and increases the maximum capacity of the rainy day fund
-**Description**: Establishes a spending cap. Increases the maximum capacity of the rainy day fund.
-
-**Bill Date**: 2026-01-07
-
-[Link to Bill](https://openstates.org/ny/bills/2025-2026/A7530/)
----
-## [NEW YORK] S 9212: Provides for certain death benefits to deputy sheriffs employed by Orange county
-**Description**: Provides for certain death benefits to deputy sheriffs employed by Orange county.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ny/bills/2025-2026/S9212/)
----
-## [NEW YORK] S 8824: Clarifies standards for glass repair and calibration of advanced driver assistance systems
-**Description**: Clarifies standards for glass repair and calibration of advanced driver assistance systems for motor vehicle glass repair facilities.
-
-**Bill Date**: 2026-02-13
-
-[Link to Bill](https://openstates.org/ny/bills/2025-2026/S8824/)
----
-## [NEW YORK] S 1100: Enacts the "open shelves act"
-**Description**: Ensures that library staff of free association, public, and hospital libraries, and with certain advice, Indian libraries, are able to develop collections, services, and programming that reflect the values and protections established under the human rights law and the equal rights amendment to the state constitution.
-
-**Bill Date**: 2026-01-07
-
-[Link to Bill](https://openstates.org/ny/bills/2025-2026/S1100/)
----
-## [FLORIDA] SB 820: Problem-solving Court Reports
-**Description**: Problem-solving Court Reports. Requiring the Office of the State Courts Administrator to provide a problem-solving court report to the Legislature annually by a specified date. Requiring specified court programs to collect certain data and information for program evaluation. Requiring each such court program to report such data and information annually to the office, etc.
-
-**Bill Date**: 2026-02-17
-
-[Link to Bill](https://openstates.org/fl/bills/2026/SB820/)
----
-## [FLORIDA] SB 658: Water Safety Requirements for the Rental of Residential and Vacation Properties
-**Description**: Water Safety Requirements for the Rental of Residential and Vacation Properties. (THIS BILL COMBINES SB's 658 & 608) Requiring a landlord to equip certain rental properties with specified water safety features. Providing criminal penalties. Requiring a public lodging establishment licensed as a vacation rental to equip certain rental units with specified water safety features. Providing an exception.
-
-**Bill Date**: 2026-02-17
-
-[Link to Bill](https://openstates.org/fl/bills/2026/SB658/)
----
-## [FLORIDA] SB 1498: Community Associations
-**Description**: Community Associations. Revising conditions that constitute a violation of certain provisions related to certain records of a condominium association. Revising how associations that have not adopted electronic voting are required to receive electronically transmitted ballots. Revising a requirement that a developer, before turning over control of a cooperative association to unit owners, have a turnover inspection report for all buildings on the cooperative property, rather than only for buildings that are three stories or higher. Providing that the official records of a homeowners’ association are open to inspection by certain persons at all reasonable times, etc.
+## [NEW YORK] S 8631: Relates to the treatment of certain deductions allowable under the internal revenue code in calculating federal adjusted gross income
+**Description**: Provides that certain deductions allowable under the internal revenue code related to certain types of property and domestic research or experimental expenditures shall be added to federal adjusted gross income.
 
 **Bill Date**: 2026-02-10
 
-[Link to Bill](https://openstates.org/fl/bills/2026/SB1498/)
+[Link to Bill](https://openstates.org/ny/bills/2025-2026/S8631/)
 ---
-## [FLORIDA] HB 799: Ad Valorem Tax Revenue in Fiscally Constrained Counties
-**Description**: Ad Valorem Tax Revenue in Fiscally Constrained Counties. Requires Legislature to appropriate funds for specified purpose. Requires that such funds be distributed in specified manner. Requires specified counties to apply for such distribution. Provides requirements for application.
+## [NEW YORK] S 9005: Enacts into law major components of legislation necessary to implement the state public protection and general government budget for the 2026-2027 state fiscal year
+**Description**: Enacts into law major components of legislation necessary to implement the state public protection and general government budget for the 2026-2027 state fiscal year. Makes permanent the recruitment incentive and retention program for certain active members of the New York army national guard, New York air national guard, and New York naval militia (Part A). Extends the suspension of the subsidy to the state emergency services revolving loan fund from the public safety communications surcharge until 2030 (Part B). Establishes crimes related to convertible pistols and utilizing three-dimensional printers for manufacturing ghost guns and firearm components (Subpart A). Provides for firearm prevention technology requirements for three-dimensional printers (Subpart B)(Part C).
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/ny/bills/2025-2026/S9005/)
+---
+## [NEW YORK] S 9044: Authorizes SUNY and CUNY to provide emergency aid grants to certain students
+**Description**: Authorizes SUNY and CUNY to provide emergency aid grants to certain students. Provides that the state shall reimburse half of all such grants provided. Requires the higher education services corporation to provide an annual report on such programs.
+
+**Bill Date**: 2026-01-27
+
+[Link to Bill](https://openstates.org/ny/bills/2025-2026/S9044/)
+---
+## [NEW YORK] A 10310: Requires residential health care facilities to maintain hospice agreements to ensure access to hospice services for eligible residents
+**Description**: Requires residential health care facilities to maintain hospice agreements to ensure access to hospice services for eligible residents.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/ny/bills/2025-2026/A10310/)
+---
+## [NEW YORK] S 8895: Establishes a new assault crime for an assault on a retired police officer who previously arrested the assailant
+**Description**: Establishes a new assault crime for an assault on a retired police officer who previously arrested the assailant. Establishes that assaulting such a retired police officer with intent to seek retribution is assault in the first degree.
 
 **Bill Date**: 2026-01-13
 
-[Link to Bill](https://openstates.org/fl/bills/2026/HB799/)
+[Link to Bill](https://openstates.org/ny/bills/2025-2026/S8895/)
 ---
-## [FLORIDA] SB 1168: Background Screenings
-**Description**: Background Screenings. Specifying additional disqualifying offenses under the background screening requirements for certain persons. Requiring the Agency for Health Care Administration, beginning on a specified date or as soon as practicable thereafter, to review and determine eligibility for all criminal history checks submitted to the Care Provider Background Screening Clearinghouse by specified agencies. Providing that, beginning on a specified date, an independent sanctioning authority is considered a qualified entity for the purpose of participating in the clearinghouse. Requiring qualified entities conducting background criminal history checks to designate a user administrator for a specified purpose, etc.
+## [NEW YORK] A 10334: Phases out certain mandatory university fees for graduate students
+**Description**: Provides that beginning in the 2026-2027 academic year, certain graduate students shall be required to pay 25% of all current and future mandatory university fees. Provides that in the 2027-2028 academic year and thereafter, no mandatory university fees shall be charged, with the exclusion of the graduate student association student activity fee.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2026-02-20
 
-[Link to Bill](https://openstates.org/fl/bills/2026/SB1168/)
+[Link to Bill](https://openstates.org/ny/bills/2025-2026/A10334/)
 ---
-## [FLORIDA] HB 687: Government Waste and Misconduct
-**Description**: Government Waste and Misconduct. Requires specified parties prepare a report investigating & evaluating specified subjects & identifying certain funds. Requires AG to take certain actions to recover specified funds. Requires such recovered funds be used for certain purpose. Requires specified funds be transferred & used for certain purpose.
+## [NEW YORK] S 6650: Relates to value-based care for maternity coverage
+**Description**: Requires contracts for insurance and medical assistance to provide value-based care for maternity coverage. Defines value-based care as an arrangement that financially rewards certain positive outcomes and financially penalizes certain negative outcomes.
 
-**Bill Date**: 2026-01-13
+**Bill Date**: 2026-02-20
 
-[Link to Bill](https://openstates.org/fl/bills/2026/HB687/)
+[Link to Bill](https://openstates.org/ny/bills/2025-2026/S6650/)
 ---
-## [FLORIDA] SB 840: Land Use Regulations for Local Governments Affected by Natural Disasters
-**Description**: Land Use Regulations for Local Governments Affected by Natural Disasters. Prohibiting impacted local governments from enforcing certain moratoriums, requiring the repair or reconstruction of certain improvements to meet certain requirements, or enforcing changes to specified procedures. Revising circumstances under which impacted local governments may enforce certain amendments, site plans, development permits, or development orders. Deleting provisions related to filing suit against an impacted local government for injunctive relief, etc.
+## [NEW YORK] S 2360: Relates to supervision by certain nurse practitioners; makes certain provisions permanent relating to nurse practitioners
+**Description**: Relates to supervision by certain nurse practitioners. Makes certain provisions permanent relating to nurse practitioners.
 
-**Bill Date**: 2026-02-17
+**Bill Date**: 2026-01-07
 
-[Link to Bill](https://openstates.org/fl/bills/2026/SB840/)
+[Link to Bill](https://openstates.org/ny/bills/2025-2026/S2360/)
 ---
-## [FLORIDA] SB 280: Assessment of Homestead Property
-**Description**: Assessment of Homestead Property. Limiting the assessed value upon change of ownership of homestead property having a prior assessed value below a certain amount when the person acquiring the property is entitled to a homestead exemption, etc.
+## [NEW YORK] A 10331: Enacts the Census Enumerator Navigation Safety for Unimpeded Surveying Act
+**Description**: Supplements federal law regarding access by census enumerators to multi-residence buildings. Provides for the development of guidance regarding access for building personnel. Provides penalties for violations. And provides for a complaint process.
 
-**Bill Date**: 2026-01-13
+**Bill Date**: 2026-02-20
 
-[Link to Bill](https://openstates.org/fl/bills/2026/SB280/)
+[Link to Bill](https://openstates.org/ny/bills/2025-2026/A10331/)
 ---
-## [FLORIDA] SB 1442: Long-range Program Plans
-**Description**: Long-range Program Plans. Requiring that plans of state agencies be based on statutorily established policies and driven by priorities and outcomes to achieve certain goals, objectives, and policies. Requiring that the plans of the judicial branch be policy based, priority driven, accountable, and developed through careful examination and justification of programs and activities. Requiring that plans identify specified performance measures, trends and conditions relevant to the performance measures and state goals, agency programs implementing statutorily established policies, and the judicial branch programs implementing state policy, etc.
+## [TEXAS] HB 252: Relating to an affirmative defense to prosecution for certain victims of trafficking of persons or compelling prostitution.
+**Description**: Relating to an affirmative defense to prosecution for certain victims of trafficking of persons or compelling prostitution.
 
-**Bill Date**: 2026-02-17
+**Bill Date**: 2025-08-19
 
-[Link to Bill](https://openstates.org/fl/bills/2026/SB1442/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB252/)
 ---
-## [FLORIDA] SB 694: Compensation of the Descendants of Charles Greenlee, Walter Irvin, Samuel Shepherd, and Ernest Thomas
-**Description**: Compensation of the Descendants of Charles Greenlee, Walter Irvin, Samuel Shepherd, and Ernest Thomas. Providing that certain facts are found and declared to be true. Providing that a sum is appropriated from the General Revenue Fund to the Department of State for specified relief. Requiring that a specified percentage of such relief be provided to certain individuals and estates. Providing that specified persons are ineligible for further compensation, etc.
-    
-        APPROPRIATION:
-        $4,000,000.
+## [TEXAS] HB 97: Relating to reducing school district maintenance and operations ad valorem taxes through the use of certain surplus state revenue.
+**Description**: Relating to reducing school district maintenance and operations ad valorem taxes through the use of certain surplus state revenue.
 
-**Bill Date**: 2026-02-17
+**Bill Date**: 2025-08-18
 
-[Link to Bill](https://openstates.org/fl/bills/2026/SB694/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB97/)
 ---
-## [FLORIDA] SB 576: Local Government Cybersecurity
-**Description**: Local Government Cybersecurity. Creating the Local Government Cybersecurity Protection Program within the Florida Digital Service. Requiring the grant program to be administered by the Florida Digital Service. Requiring the Florida Digital Service to enter into certain data-sharing agreements with local governments for a specified purpose. Requiring the Florida Digital Service to contract for information technology commodities and services and award such commodities and services to local governments, etc.
+## [TEXAS] HB 214: Relating to the designation and use of certain spaces and facilities according to sex; authorizing a civil penalty and a private civil right of action.
+**Description**: Relating to the designation and use of certain spaces and facilities according to sex. Authorizing a civil penalty and a private civil right of action.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-08-20
 
-[Link to Bill](https://openstates.org/fl/bills/2026/SB576/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB214/)
 ---
-## [FLORIDA] SB 706: Commercial Service Airports
-**Description**: Commercial Service Airports. Preempting the naming of major commercial service airports to the state. Providing names for major commercial service airports. Providing that such airport names continue to be valid under certain circumstances. Requiring the Department of Transportation to annually review provisions naming major commercial service airports for a certain purpose.
+## [TEXAS] HB 258: Relating to real property theft and real property fraud; establishing recording requirements for certain documents concerning real property; creating the criminal offenses of real property theft and real property fraud and establishing a statute of limitations, restitution, and certain procedures with respect to those offenses.
+**Description**: Relating to real property theft and real property fraud. Establishing recording requirements for certain documents concerning real property. Creating the criminal offenses of real property theft and real property fraud and establishing a statute of limitations, restitution, and certain procedures with respect to those offenses.
 
-**Bill Date**: 2026-02-17
+**Bill Date**: 2025-08-19
 
-[Link to Bill](https://openstates.org/fl/bills/2026/SB706/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB258/)
 ---
-## [FLORIDA] SB 594: Local Housing Assistance Plans
-**Description**: Local Housing Assistance Plans. Authorizing counties and eligible municipalities to expend certain funds on lot rental assistance for mobile home owners for a specified time period. Requiring each county and eligible municipality to include in its local housing assistance plan certain strategies. Authorizing counties and eligible municipalities to provide certain funds to mobile home owners for rehabilitation and emergency repairs, etc.
+## [TEXAS] HB 151: Relating to designating certain substances as Schedule IV controlled substances under the Texas Controlled Substances Act.
+**Description**: Relating to designating certain substances as Schedule IV controlled substances under the Texas Controlled Substances Act.
 
-**Bill Date**: 2026-02-11
+**Bill Date**: 2025-08-18
 
-[Link to Bill](https://openstates.org/fl/bills/2026/SB594/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB151/)
 ---
-## [ILLINOIS] HR 668: AIRLINES-MIN. SEAT STANDARDS
-**Description**: Urges commercial airlines operating in the United States to adopt reasonable minimum passenger seating standards that reflect modern body dimensions and support basic comfort, safety, and mobility for the general public. Calls upon federal aviation and transportation regulators to study and establish minimum standards for seat width, legroom, and pitch informed by public health data, disability access considerations, and passenger safety research. Encourages airlines to ensure seating practices do not discriminate against or unduly burden passengers with disabilities or health-related needs, and that reasonable accommodation not be treated as a premium add-on. Urges greater pricing and seating transparency, including clear disclosure of seat dimensions and legroom at the time of ticket purchase, so consumers can make informed travel decisions without surprise fees.
+## [TEXAS] HB 231: Relating to an exemption from the requirement to obtain a permit from the Texas Commission on Environmental Quality for certain dams or reservoirs operated and maintained for the purposes of erosion, floodwater, and sediment control.
+**Description**: Relating to an exemption from the requirement to obtain a permit from the Texas Commission on Environmental Quality for certain dams or reservoirs operated and maintained for the purposes of erosion, floodwater, and sediment control.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-08-20
 
-[Link to Bill](https://openstates.org/il/bills/104th/HR668/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB231/)
 ---
-## [ILLINOIS] HB 5453: EPA-CCR MANAGEMENT
-**Description**: Amends the Environmental Protection Act. Defines "CCR management unit" as any area of land at any facility with a CCR surface impoundment, on which any noncontainerized accumulation of CCR is received, is placed, or is otherwise managed, and that is not itself a CCR surface impoundment. Provides that the term "CCR management unit" does not include CCR used in a manner that meets the definition of coal combustion by-product, unless the owner or operator, or the Agency, determines that the CCR is causing or contributing to a statistically significant concentration of one or more constituents above the groundwater protection standard established by the Board. Provides that no later than February 8, 2027, the owner or operator of a CCR surface impoundment must submit to the Agency a copy of the Facility Evaluation Reports Part 1 and 2. Provides that the Board shall adopt rules establishing permit requirements, reporting, financial assurance, and closure and post-closure care requirements for CCR management units.
+## [TEXAS] HB 236: Relating to an affirmative defense to prosecution for certain victims of trafficking of persons or compelling prostitution.
+**Description**: Relating to an affirmative defense to prosecution for certain victims of trafficking of persons or compelling prostitution.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-08-20
 
-[Link to Bill](https://openstates.org/il/bills/104th/HB5453/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB236/)
 ---
-## [ILLINOIS] HB 1175: EPA-GREAT LAKES CCR PROTECTION
-**Description**: Amends the Environmental Protection Act. Provides that owners and operators of CCR surface impoundments at electric generating plants that are bordering Lake Michigan shall close the CCR surface impoundment by removal by off-site disposal, pursuant to specified provisions and requirements. In additional provisions, requires an owner or operator to remove from his or her site, for off-site disposal, all CCR generated by a facility that is not disposed of, treated, stored, or abandoned in a CCR surface impoundment, and remediate all soil and groundwater impacted by that CCR, in accordance with specified requirements. Requires owners or operators to submit specified plans and reports to the Environmental Protection Agency. Provides that an owner or operator shall post with the Agency a performance bond or other security for the purpose of ensuring removal and remediation in accordance with the provisions.
+## [TEXAS] HB 29: Relating to election procedures regarding accepting a voter with a residence address that is not current and the immediate effect of a voter's registration after the registrar's receipt of certain change of address notices.
+**Description**: Relating to election procedures regarding accepting a voter with a residence address that is not current and the immediate effect of a voter's registration after the registrar's receipt of certain change of address notices.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-08-28
 
-[Link to Bill](https://openstates.org/il/bills/104th/HB1175/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB29/)
 ---
-## [ILLINOIS] HB 5534: POLICE-DOMESTIC ABUSER REGSTRY
-**Description**: Amends the Illinois State Police Act. Creates a registry of persistent domestic violence offenders within the Illinois State Police. Provides that the Illinois State Police shall maintain the registry based upon information supplied to the Illinois State Police by court clerks and information available to the Illinois State Police from the Department of Corrections and local law enforcement agencies. Provides that the Illinois State Police shall make the registry available for public inquiry on the Internet. Provides that the registry must consist of the persistent domestic violence offender's name, date of birth, conviction date, county of convictions, and a current photograph of the persistent domestic violence offender.
+## [TEXAS] HB 10: Relating to an affirmative defense to prosecution for certain victims of trafficking of persons or compelling prostitution.
+**Description**: Relating to an affirmative defense to prosecution for certain victims of trafficking of persons or compelling prostitution.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-08-18
 
-[Link to Bill](https://openstates.org/il/bills/104th/HB5534/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB10/)
 ---
-## [ILLINOIS] HB 5589: HOSPITAL FINANCIAL RESOLUTION
-**Description**: Amends the Hospital Licensing Act. Requires each hospital licensed under the Act to submit to the Department of Public Health a financial resolution plan with the specified information for the rapid and orderly resolution of finances and operations in the event of material financial distress. Establishes further reporting requirements and penalties. Includes financial resolution plans in the list of information subject to disclosure to the public from the Department. Amends the Illinois Public Aid Code.
+## [TEXAS] HB 91: Relating to reducing school district maintenance and operations ad valorem taxes through the use of certain surplus state revenue.
+**Description**: Relating to reducing school district maintenance and operations ad valorem taxes through the use of certain surplus state revenue.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-08-18
 
-[Link to Bill](https://openstates.org/il/bills/104th/HB5589/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB91/)
 ---
-## [ILLINOIS] HB 5600: WAREHOUSE POLLUTION REDUCTION
-**Description**: Creates the Warehouse Pollution Reduction Act. Requires the Environmental Protection Agency to propose and the Pollution Control Board to adopt rules establishing a qualifying warehouse review program. Provides for reporting, recordkeeping, and notice requirements. Annual emissions-reduction targets. And a system of points for air-pollution mitigation measures.
+## [TEXAS] HB 192: Relating to the funding of law enforcement agencies in certain counties.
+**Description**: Relating to the funding of law enforcement agencies in certain counties.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-09-17
 
-[Link to Bill](https://openstates.org/il/bills/104th/HB5600/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB192/)
 ---
-## [ILLINOIS] HB 5563: POLICE-DOMESTIC ABUSER REGSTRY
-**Description**: Amends the Illinois State Police Act. Creates a registry of persistent domestic violence offenders within the Illinois State Police. Provides that the Illinois State Police shall maintain the registry based upon information supplied to the Illinois State Police by court clerks and information available to the Illinois State Police from the Department of Corrections and local law enforcement agencies. Provides that the Illinois State Police shall make the registry available for public inquiry on the Internet. Provides that the registry must consist of the persistent domestic violence offender's name, date of birth, conviction date, county of convictions, and a current photograph of the persistent domestic violence offender.
+## [TEXAS] HB 15: Relating to certain files maintained by a law enforcement agency regarding certain employees of the agency.
+**Description**: Relating to certain files maintained by a law enforcement agency regarding certain employees of the agency.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-09-02
 
-[Link to Bill](https://openstates.org/il/bills/104th/HB5563/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB15/)
 ---
-## [ILLINOIS] HB 5450: MUNI CD-ELECTIONS
-**Description**: Amends the Illinois Municipal Code. Provides that, no municipal official, municipal employee, or candidate for a municipal office shall engage in or permit the unauthorized use of any municipal property. Provides that no candidate for municipal office or political fundraising committee may use any municipal property or photographic or filmed image of municipal property for the purpose of influencing, in any way, the outcome of any election of any candidate for municipal office. Provides that specified expenditures made by political fundraising committees for the purpose of either financing communications expressly advocating for the election or defeat of a clearly identified candidate for municipal office or soliciting funds for purpose of financing communications expressly advocating the election or defeat of a clearly identified candidate for municipal office, if paid for and authorized by a candidate for municipal office or an authorized political committee of a candidate for municipal office or its agents, shall clearly state that the communication was paid for by the authorized political fundraising committee and shall contain a statement, either read by the candidate in a pre-recorded audio message or clearly printed, that the candidate has approved the communication.
+## [TEXAS] HB 92: Relating to the repeal of or limitations on certain state and local taxes, including school district maintenance and operations ad valorem taxes, the enactment of state and local value added taxes, and related school finance reform; imposing taxes.
+**Description**: Relating to the repeal of or limitations on certain state and local taxes, including school district maintenance and operations ad valorem taxes, the enactment of state and local value added taxes, and related school finance reform. Imposing taxes.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-08-20
 
-[Link to Bill](https://openstates.org/il/bills/104th/HB5450/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB92/)
 ---
-## [ILLINOIS] HB 5468: MENTAL HEALTH 9-1-1 CALLS
-**Description**: Amends the Community Emergency Services and Support Act. Replaces all references to the Division of Mental Health of the Department of Human Services with the Department of Human Services throughout the Act. Provides that 9-1-1 public safety answering points shall screen specific types of law enforcement calls and follow approved protocols and processes under the Act to identify callers experiencing behavioral health crises and to refer them for a behavioral health response. Provides that 9-1-1 public safety answering points shall open and follow the emergency medical dispatch protocols established under the Emergency Medical Services (EMS) Systems Act at the start of all emergency calls to ensure the protocols are used and applied consistently and uniformly to ensure that information related to behavioral health emergency calls is available for data collection and can be used to determine which calls should be referred for a behavioral health response. Provides that, among other things, each Regional Advisory Committee or subregional committee must (1) review regional and subregional crisis response system capacities and resources to inform planning and implementation and to foster collaboration across all sectors of the system and (2) determine the need for and make a plan to support local communities to develop and use other resources to create additional mobile mental health relief provider services to expand the capacity to provide more immediate service coverage.
+## [TEXAS] HB 27: Relating to a groundwater study of certain aquifers underlying the territory of the Neches and Trinity Valleys Groundwater Conservation District by the Texas Water Development Board before the issuance of permits or permit amendments by the district.
+**Description**: Relating to a groundwater study of certain aquifers underlying the territory of the Neches and Trinity Valleys Groundwater Conservation District by the Texas Water Development Board before the issuance of permits or permit amendments by the district.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2025-09-03
 
-[Link to Bill](https://openstates.org/il/bills/104th/HB5468/)
+[Link to Bill](https://openstates.org/tx/bills/892/HB27/)
 ---
-## [ILLINOIS] HB 5474: OUTDOOR LIGHTING CONTROL
-**Description**: Amends the Responsible Outdoor Lighting Control Act. Provides that all new luminaires purchased or installed after June 30, 2032, must have a correlated color temperature less than or equal to 2,700 Kelvin. Provides that the act does not apply if it is necessary to use uplighting for statuary lighting and historical façade lighting. In cases where uplighting is the only viable solution for these items, the lighting should have a color corrected temperature of no more than 2,700 degrees Kelvin, must be minimized to no more than 25% above ANSI/IES standards, must exceed an illuminance of one lux as measured at ground level both horizontally and vertically at the property boundary, and must be extinguished every night no later than 12:00 a.m. Provides that, after January 1, 2027, any new placement or replacement of uplighting of State historic statuary and State historical facade lighting shall be approved by the State Historic Preservation Office.
+## [FLORIDA] HB 277: Domestic Violence and Protective Injunctions
+**Description**: Domestic Violence and Protective Injunctions. Provides enhanced penalties for committing domestic violence offense if person has prior conviction for domestic violence. Provides that sentencing & incentive gain-time eligibility determinations are made without regard to penalty enhancement. Authorizes & in certain circumstances requires court to order electronic monitoring in domestic violence cases. Requires respondent to pay for such electronic monitoring services.
 
-**Bill Date**: 2026-02-13
+**Bill Date**: 2026-02-16
 
-[Link to Bill](https://openstates.org/il/bills/104th/HB5474/)
+[Link to Bill](https://openstates.org/fl/bills/2026/HB277/)
 ---
-## [PENNSYLVANIA] SB 867: An Act amending the act of November 10, 1999 (P.L.491, No.45), known as the Pennsylvania Construction Code Act, in preliminary provisions, further providing for definitions and for Accessibility Advisory Board; in Uniform Construction Code, further providing for adoption by regulations and for revised or successor codes; in training and certification of inspectors, further providing for education and training programs; and establishing the Accessibility Advisory Board Administration Account.
-**Description**: An Act amending the act of November 10, 1999 (P.L.491, No.45), known as the Pennsylvania Construction Code Act, in preliminary provisions, further providing for definitions and for Accessibility Advisory Board. In Uniform Construction Code, further providing for adoption by regulations and for revised or successor codes. In training and certification of inspectors, further providing for education and training programs. And establishing the Accessibility Advisory Board Administration Account.
-
-**Bill Date**: 2026-02-04T05:00:00+00:00
-
-[Link to Bill](https://openstates.org/pa/bills/2025-2026/SB867/)
----
-## [PENNSYLVANIA] SB 101: An Act amending the act of December 18, 2001 (P.L.949, No.114), known as the Workforce Development Act, in preliminary provisions, further providing for definitions; and, in local workforce development areas and regions and local workforce development boards, further providing for plan, functions and responsibilities and providing for technical assistance and data availability and for local performance accountability.
-**Description**: An Act amending the act of December 18, 2001 (P.L.949, No.114), known as the Workforce Development Act, in preliminary provisions, further providing for definitions. And, in local workforce development areas and regions and local workforce development boards, further providing for plan, functions and responsibilities and providing for technical assistance and data availability and for local performance accountability.
-
-**Bill Date**: 2025-06-25T04:00:00+00:00
-
-[Link to Bill](https://openstates.org/pa/bills/2025-2026/SB101/)
----
-## [PENNSYLVANIA] HB 257: An Act amending Titles 4 (Amusements), 74 (Transportation) and 75 (Vehicles) of the Pennsylvania Consolidated Statutes, in interactive gaming, further providing for interactive gaming tax; in sustainable mobility options, further providing for definitions, for fund and for operating program and providing for annual performance evaluation and for operating a controlled substance injection site near infrastructure of a local transportation organization; in metropolitan transportation authorities, further providing for special prosecutor for mass transit; in public-private transportation partnerships, providing for metropolitan transportation authority projects; in licensing of drivers, further providing for persons ineligible for licensing, license issuance to minors and junior driver's license, for learners' permits, for application for driver's license or learner's permit by minor and for examination of applicant for driver's license; in miscellaneous provisions relating to operation of vehicles, providing for the offense of interference with operation or movement of a public transit vehicle and for sentencing enhancement for drug delivery on transit; in lighting equipment, further providing for use and display of illuminated signs; in taxes for highway maintenance and construction, providing for supplemental funding for three and four digit highway construction; and establishing the Supplemental Funding for Three and Four Digit State Routes Account in the Motor License Fund.
-**Description**: An Act amending Titles 4 (Amusements), 74 (Transportation) and 75 (Vehicles) of the Pennsylvania Consolidated Statutes, in interactive gaming, further providing for interactive gaming tax. In sustainable mobility options, further providing for definitions, for fund and for operating program and providing for annual performance evaluation and for operating a controlled substance injection site near infrastructure of a local transportation organization. In metropolitan transportation authorities, further providing for special prosecutor for mass transit. In public-private transportation partnerships, providing for metropolitan transportation authority projects. In licensing of drivers, further providing for persons ineligible for licensing, license issuance to minors and junior driver's license, for learners' permits, for application for driver's license or learner's permit by minor and for examination of applicant for driver's license.
-
-**Bill Date**: 2025-09-09T04:00:00+00:00
-
-[Link to Bill](https://openstates.org/pa/bills/2025-2026/HB257/)
----
-## [DELAWARE] SB 201: AN ACT TO AMEND TITLE 24 OF THE DELAWARE CODE RELATING TO REAL ESTATE BROKERS AND SALESPERSONS
-**Description**: Section 1 of the Act exempts an individual not engaged in the business of “wholesaling” real estate from needing to be a real estate licensee. The business of wholesaling is when someone enters into an Agreement of Sale as a buyer, then markets the property and assigns that agreement to a different buyer and collects a fee for that assignment. While this process is unobjectionable under certain circumstances, at other times, it is used as a means to charge an excessive assignment fee, which is “equity stripping” of money that should go to the seller. The Act makes clear that marketing properties this way is the brokerage of real estate and must be done by a real estate broker. This is based on similar laws in Pennsylvania.
-Section 2 of the Act includes the business of wholesaling under the definition of real estate services.
+## [FLORIDA] SB 164: Civil Liability for the Wrongful Death of an Unborn Child
+**Description**: Civil Liability for the Wrongful Death of an Unborn Child. Revising the definition of the term “survivors” to include the parents of an unborn child. Defining the term “unborn child”. Prohibiting a right of action against the mother for the wrongful death of an unborn child or against a medical provider for lawful medical care provided in certain circumstances, etc.
 
 **Bill Date**: 2026-01-29
 
-[Link to Bill](https://openstates.org/de/bills/153/SB201/)
+[Link to Bill](https://openstates.org/fl/bills/2026/SB164/)
 ---
-## [DELAWARE] HB 233: AN ACT TO AMEND TITLE 26 OF THE DELAWARE CODE RELATING TO LARGE ENERGY USE FACILITIES.
-**Description**: This Act requires regulated utilities to establish a separate rate for large energy-use facilities that mitigates the risk of costs associated with expanding infrastructure and maintaining reliability in the face of growing demand from being shifted to residential, small business, and other electric customers. The Public Service Commission will consider the following factors in determining whether to approve a rate application:
-1. Whether the rates have the potential to result in increased rates or unwarranted risk to other retail electricity customers.
-2. Whether the rates will provide for equitable contributions to grid efficiency, reliability, and resiliency.
-3. Whether the rates will impede the utility’s ability to meet renewable energy targets and reduce greenhouse gases consistent with state policy.
-4.
+## [FLORIDA] HB 375: Autonomous Practice by a Certified Registered Nurse Anesthetist
+**Description**: Autonomous Practice by a Certified Registered Nurse Anesthetist. Revises staff membership & clinical privileges for certain certified registered nurse anesthetists. Authorizes certain certified registered nurse anesthetists to perform specified acts. Revises practice requirements for autonomous advanced practice registered nurses. Authorizes autonomous advanced practice registered nurses to perform certain acts.
 
-**Bill Date**: 2026-01-28
+**Bill Date**: 2026-02-10
 
-[Link to Bill](https://openstates.org/de/bills/153/HB233/)
+[Link to Bill](https://openstates.org/fl/bills/2026/HB375/)
 ---
-## [TENNESSEE] HB 1741: Opioids - As introduced, authorizes an insurer that offers an insurance policy that covers an inmate incarcerated in this state to adopt or amend a preferred drug list (PDL); requires the insurer to ensure that a non-opioid drug approved by the U.S. food and drug administration for the treatment or management of pain is not disadvantaged or discouraged with respect to coverage relative to an opioid or narcotic drug for the treatment or management of pain on the PDL. - Amends TCA Title 8; Title 41; Title 53; Title 56; Title 63; Title 68 and Title 71.
-**Description**: Opioids - As introduced, authorizes an insurer that offers an insurance policy that covers an inmate incarcerated in this state to adopt or amend a preferred drug list (PDL). Requires the insurer to ensure that a non-opioid drug approved by the U.S. Food and drug administration for the treatment or management of pain is not disadvantaged or discouraged with respect to coverage relative to an opioid or narcotic drug for the treatment or management of pain on the PDL. - Amends TCA Title 8. Title 41.
+## [FLORIDA] SB 692: Cybersecurity Standards and Liability
+**Description**: Cybersecurity Standards and Liability. Prohibiting local governments from imposing certain cybersecurity standards or processes on vendors. Providing that a local government, a covered entity, or a third-party agent that complies with certain requirements is not liable in connection with a cybersecurity incident under certain circumstances. Requiring covered entities and third-party agents to implement revised frameworks, standards, laws, or regulations within a specified timeframe in order to retain protection from liability, etc.
 
 **Bill Date**: 2026-02-11
 
-[Link to Bill](https://openstates.org/tn/bills/114/HB1741/)
+[Link to Bill](https://openstates.org/fl/bills/2026/SB692/)
 ---
-## [TENNESSEE] HB 2174: Firearms and Ammunition - As introduced, authorizes certain sitting or retired judges to carry weapons in any location that a law enforcement officer is authorized to carry a weapon if the judge could otherwise qualify for an enhanced handgun carry permit. - Amends TCA Title 39, Chapter 17, Part 13.
-**Description**: Firearms and Ammunition - As introduced, authorizes certain sitting or retired judges to carry weapons in any location that a law enforcement officer is authorized to carry a weapon if the judge could otherwise qualify for an enhanced handgun carry permit. - Amends TCA Title 39, Chapter 17, Part 13.
+## [FLORIDA] SB 42: Specific Medical Diagnoses in Child Protective Investigations
+**Description**: Specific Medical Diagnoses in Child Protective Investigations. Providing an exception to the requirement that the Department of Children and Families immediately forward certain allegations to a law enforcement agency. Requiring a child protective investigator to inform the subject of an investigation of a certain duty. Requiring Child Protection Teams to consult with a licensed physician or advanced practice registered nurse with specified pediatric experience when evaluating certain reports. Authorizing a parent or legal custodian of a child who is the subject of certain orders to request specified medical examinations of the child within a specified timeframe, etc.
 
-**Bill Date**: 2026-02-11
+**Bill Date**: 2026-02-20
 
-[Link to Bill](https://openstates.org/tn/bills/114/HB2174/)
+[Link to Bill](https://openstates.org/fl/bills/2026/SB42/)
 ---
-## [TENNESSEE] SB 2358: Podiatrists - As introduced, changes the scope of practice of a podiatrist from a person who examines, diagnoses, or treats, in addition to the ailments of the human foot and ankle, the soft tissue of the lower leg distal to the tibial tuberosity, instead of the soft tissue structures extending no higher than the distal tibial metaphyseal flair. - Amends TCA Title 63.
-**Description**: Podiatrists - As introduced, changes the scope of practice of a podiatrist from a person who examines, diagnoses, or treats, in addition to the ailments of the human foot and ankle, the soft tissue of the lower leg distal to the tibial tuberosity, instead of the soft tissue structures extending no higher than the distal tibial metaphyseal flair. - Amends TCA Title 63.
+## [FLORIDA] HB 137: Coverage for Mammograms and Supplemental Breast Cancer Screenings
+**Description**: Coverage for Mammograms and Supplemental Breast Cancer Screenings. Requires AHCA to provide coverage for yearly mammograms & yearly supplemental breast cancer screenings for certain women. Revises coverages for mammograms under certain individual accident & health insurance policies, group, blanket, & franchise accident & health insurance policies, & health maintenance contracts. Requires coverages for supplemental breast cancer screenings under such policies & contracts under certain circumstances.
 
-**Bill Date**: 2026-02-11
+**Bill Date**: 2026-01-13
 
-[Link to Bill](https://openstates.org/tn/bills/114/SB2358/)
+[Link to Bill](https://openstates.org/fl/bills/2026/HB137/)
 ---
-## [TENNESSEE] HB 2344: Public Contracts - As introduced, requires local governmental entities to provide a 30-day local bidding period for certain contracts, during which only local businesses may submit bids; creates a bidding preference for local businesses. - Amends TCA Title 9 and Title 12.
-**Description**: Public Contracts - As introduced, requires local governmental entities to provide a 30-day local bidding period for certain contracts, during which only local businesses may submit bids. Creates a bidding preference for local businesses. - Amends TCA Title 9 and Title 12.
+## [FLORIDA] SB 10: Relief of Maury Hernandez by the Department of Corrections
+**Description**: Relief of Maury Hernandez by the Department of Corrections. Providing for the relief of Maury Hernandez. Providing an appropriation to compensate former Broward County Sheriff’s Deputy Maury Hernandez for injuries and damages sustained as a consequence of the Department of Corrections’ failures to enforce probation laws, regulations, and policies. Providing legislative intent that certain liens be waived. Providing a limitation on the payment of compensation and attorney fees, etc.
+    
+        CLAIM WITH APPROPRIATION:
+        $5,000,000.
 
-**Bill Date**: 2026-02-11
+**Bill Date**: 2026-01-13
 
-[Link to Bill](https://openstates.org/tn/bills/114/HB2344/)
+[Link to Bill](https://openstates.org/fl/bills/2026/SB10/)
+---
+## [FLORIDA] SB 654: Traffic Infraction Enforcement
+**Description**: Traffic Infraction Enforcement. Revising the periods during which a county or municipality may enforce school zone speed limits, and the violations for which such enforcement is authorized, through the use of a speed detection system. Prohibiting the use of a traffic infraction detector for remote surveillance. Requiring district school board authorization and a public hearing process before a school district may place or install, or contract with a vendor to install, operate, and maintain, school bus infraction detection systems. Revising the periods for which a county or municipality may authorize a traffic infraction enforcement officer to issue certain uniform traffic citations, etc.
+
+**Bill Date**: 2026-02-04
+
+[Link to Bill](https://openstates.org/fl/bills/2026/SB654/)
+---
+## [FLORIDA] HB 193: Utilities
+**Description**: Utilities. Authorizes counties to adopt ordinance for decommissioning of certain solar facilities. Provides for rebuttal of certain presumptions. Requires DEP to develop, revise, & update best management practices for construction of solar facilities. Requires solar facility operators to implement specified BMPs.
+
+**Bill Date**: 2026-01-13
+
+[Link to Bill](https://openstates.org/fl/bills/2026/HB193/)
+---
+## [FLORIDA] SB 602: Watercraft Restrictions Based on Energy Source
+**Description**: Watercraft Restrictions Based on Energy Source. Providing an exception to the prohibition on state agencies, governmental authorities, and local governments restricting the use or sale of watercraft based on the energy source used to power the watercraft if such watercraft is used on certain bodies of water, etc.
+
+**Bill Date**: 2026-01-13
+
+[Link to Bill](https://openstates.org/fl/bills/2026/SB602/)
+---
+## [FLORIDA] SB 462: Autonomous Practice by a Certified Registered Nurse Anesthetist
+**Description**: Autonomous Practice by a Certified Registered Nurse Anesthetist. Revising requirements for clinical privileges for certain certified registered nurse anesthetists. Authorizing certain certified registered nurse anesthetists to perform specified acts under certain circumstances. Authorizing certain autonomous advanced practice registered nurses to perform specified acts as part of their autonomous practice, etc.
+
+**Bill Date**: 2026-01-13
+
+[Link to Bill](https://openstates.org/fl/bills/2026/SB462/)
+---
+## [FLORIDA] SB 260: Removal, Storage, and Cleanup of Electric Vehicles
+**Description**: Removal, Storage, and Cleanup of Electric Vehicles. Requiring counties to establish a daily administration storage fee for the proper storage of certain electric vehicles. Providing a maximum amount for such fees. Defining the terms “daily administration storage fee” and “proper storage”. Requiring any wrecker service or towing-storage wrecker or operator to collect and submit specific data to the Division of State Fire Marshal relating to stored damaged or submerged electric vehicles by a specified date.
+
+**Bill Date**: 2026-02-19
+
+[Link to Bill](https://openstates.org/fl/bills/2026/SB260/)
+---
+## [FLORIDA] SB 548: Growth Management
+**Description**: Growth Management. Providing requirements for coordination mechanisms that are required for certain agreements required as part of the intergovernmental coordination element of a comprehensive plan. Requiring that certain interlocal agreements use a plan-based methodology for a certain purpose. Requiring that certain capacity standards be specified in a certain impact fee study. Requiring that a demonstrated-need study be accompanied by a certain declaration.
+
+**Bill Date**: 2026-01-22
+
+[Link to Bill](https://openstates.org/fl/bills/2026/SB548/)
+---
+## [FLORIDA] SB 492: Contracting
+**Description**: Contracting. Providing minimum penalties for certain unlawful actions, etc.
+
+**Bill Date**: 2026-01-13
+
+[Link to Bill](https://openstates.org/fl/bills/2026/SB492/)
+---
+## [FLORIDA] HB 79: Water Safety Requirements for the Rental of Residential Property
+**Description**: Water Safety Requirements for the Rental of Residential Property. Requires vacation rental licensee to equip certain rental units with specified water safety features. Provides for civil liability. Provides exception.
+
+**Bill Date**: 2026-01-19
+
+[Link to Bill](https://openstates.org/fl/bills/2026/HB79/)
+---
+## [ILLINOIS] HB 2929: DHS-OVERDOSE PREVENTION SITES
+**Description**: Amends the Substance Use Disorder Act. Requires the Department of Human Services to establish a mechanism to collect research and data regarding overdose prevention sites (OPSs) and prepare a report for the General Assembly within 12 months after the effective date of the amendatory Act. Provides that the report shall contain information on (1) current research on the effectiveness of an OPS as an overdose prevention strategy. (2) OPS best practices for staffing, placement, and activities. And (3) the benefits and challenges of different OPS models - structures and settings.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB2929/)
+---
+## [ILLINOIS] HB 1443: HEALTH CARE AVAILABILITY
+**Description**: Creates the Health Care Availability and Access Board Act. Establishes the Health Care Availability and Access Board to protect State residents, State and local governments, commercial health plans, health care providers, pharmacies licensed in the State, and other stakeholders within the health care system from the high costs of prescription drug products. Contains provisions concerning Board membership and terms. Staff for the Board. Board meetings.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB1443/)
+---
+## [ILLINOIS] HR 687: CPS PORK PRODUCT BAN
+**Description**: Urges the Chicago Public Schools (CPS) Board of Education to conduct a formal review of the Local School Wellness Policy provision prohibiting pork products. Urges such a review to include identification and disclosure of the original rationale and supporting documentation for the prohibition, consultation with nutrition experts and food service professionals, and consideration of stakeholder input. Encourages the CPS Board of Education to evaluate whether limited menu testing or pilot programs allowing pork products would better align with current nutrition science, cultural inclusion, fiscal stewardship, and full utilization of available USDA foods.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HR687/)
+---
+## [ILLINOIS] HB 3596: WETLANDS PROTECTION ACT
+**Description**: Creates the Wetlands Protection Act. Provides that no person may discharge dredged or fill material into a State jurisdictional wetland except with a permit issued by the Department of Natural Resources. Exempts certain activities from the requirements of the Act. Sets forth procedures for individual permit applications and other related procedural requirements. Provides that the Department shall not issue an individual permit unless the Environmental Protection Agency certifies to the Department that there will not be a violation of State water quality standards.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB3596/)
+---
+## [ILLINOIS] HB 4559: CD CORR-SENTENCE CREDITS
+**Description**: Amends the Unified Code of Corrections. Provides that the rules and regulations of the Department of Corrections shall provide that sentence credit may be provided to an inmate who was held in pre-trial detention prior to his or her current commitment to the Department of Corrections and successfully completed a substance abuse program (rather than a full-time, 60-day or longer substance abuse program), county jail or detention facility work assignments, parenting program, or re-entry planning facilitated (rather than provided) by the county department of corrections or county jail or other provider. Provides that the rules and regulations shall also provide that sentence credit may be provided to a committed person who participated in supervised community work or activities prior to his or her commitment to the Department of Corrections. Provides that the rules and regulations shall also provide that any inmate who was held in pre-trial detention prior to his or her confinement to the Department of Corrections, engaged in self-improvement programs, volunteer work, or work assignments that are not otherwise eligible activities shall receive up to 0.5 days of sentence credit for each day in which the inmate is engaged in these activities.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB4559/)
+---
+## [ILLINOIS] HB 5293: FAILURE TO REPORT GROOMING
+**Description**: Amends the Department of Public Health Powers and Duties Law of the Civil Administrative Code of Illinois. Provides that the Department of Public Health shall conduct a Grooming Awareness Public Educational and Outreach Program, which is a public education and outreach program concerning the grooming of children, including, but not limited to, grooming behaviors and how to recognize, prevent, and report grooming behaviors. Provides that the Department of Public Health may work with other organizations to help conduct the Program which may include, but is not limited to, the Illinois Coalition Against Sexual Assault (ICASA) or the Chicago Alliance Against Sexual Exploitation (CAASE). Provides that the Department of Public Health may adopt rules that are necessary to conduct the Program. Amends the Criminal Code of 2012.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB5293/)
+---
+## [ILLINOIS] HB 5386: HUMAN RIGHTS-DISPARTE IMPACT
+**Description**: Amends the Illinois Human Rights Act. Provides that in the Articles governing employment, financial credit, and public accommodations it is a civil rights violation to use criteria or methods including practices, policies, and groups of practices or policies that has the effect of subjecting individuals to discrimination prohibited under the Act. Changes the definition of "unlawful discrimination" to mean discrimination against a person, whether by purpose or effect, because of his or her actual or perceived: race, color, religion, national origin, ancestry, age, sex, marital status, order of protection status, disability, military status, sexual orientation, pregnancy, reproductive health decisions, or unfavorable discharge from military service as those terms are defined in the Act.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB5386/)
+---
+## [ILLINOIS] HB 4927: SCH CD-WATER SAFETY CURRICULUM
+**Description**: Amends the School Code. Requires, by no later than January 1, 2027, the State Board of Education, in consultation with water safety experts, to develop or adopt and make available to school districts a model program of instruction on water safety. Requires the State Board to provide to all public and nonpublic schools an informational notice regarding water safety developed by the Department of Public Health, and requires the school to distribute the notice to the parent or legal guardian of each student enrolled in the school. Includes website posting requirements by the State Board, school districts, and nonpublic schools regarding the informational notice. Sets forth liability exemptions.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB4927/)
+---
+## [ILLINOIS] HB 2904: HEALTH CARE TRANSPARENCY
+**Description**: Creates the Health Care Transparency Act. Provides that the Department of Public Health shall identify reproductive health care services, LGBTQ health care services, and end-of-life health care services that are or may be subject to denial of care for nonmedical reasons in the State and develop a clear and simple disclosure form for the purpose of conveying to patients and to the public which of the identified health care services are and are not generally available, are subject to restriction for nonmedical reasons, and are subject to restrictions on referral by each covered entity. Requires the Department to publish and maintain on its public-facing website a current list of covered entities and provide for public access to the disclosure form submitted by each covered entity. Adopt rules implementing the Department's duties. And develop and administer to the public an education and awareness program regarding how denial of care may negatively impact health care access and quality, may be avoided, and affects vulnerable people and communities.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB2904/)
+---
+## [ILLINOIS] HB 5703: UNFUNDED MANDATES PROHIBITED
+**Description**: Amends the State Mandates Act. Provides that any State mandate regarding any subject matter enacted on or after the effective date of the amendatory Act that necessitates additional expenditures from local government revenues shall be void and unenforceable unless the General Assembly makes necessary appropriations to implement that mandate. Provides that the failure of the General Assembly to make necessary appropriations shall relieve the local government of the obligation to implement any State mandate. Makes conforming changes. Effective immediately.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB5703/)
+---
+## [ILLINOIS] HB 4196: LOC GOV-CREDIT CARD STATEMENTS
+**Description**: Amends the Township Code, the Park District Code, the Illinois Municipal Code, the School Code, and the Public Community College Act. Provides that if a township, park district, municipality, school district, or community college has been issued a credit card, then, each month, the governing authority of the township, park district, municipality, school district, or community college shall vote to verify the validity of an itemized statement of all purchases made using the credit card in the preceding month. Provides that the itemized statement must include all purchases made using the credit card in the preceding month and may not be redacted. Provides that the vote shall solely be for the approval of the itemized statement of all purchases made using the credit card and shall not include any other expense approval. Provides that, if a township, park district, municipality, school district, or community college has a website maintained by a full-time staff, then the township, park district, municipality, school district, or community college shall publish each itemized statement on its website.
+
+**Bill Date**: 2026-02-20
+
+[Link to Bill](https://openstates.org/il/bills/104th/HB4196/)
 ---
