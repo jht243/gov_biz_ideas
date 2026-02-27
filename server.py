@@ -1,6 +1,8 @@
 from flask import Flask, render_template, jsonify, request
 import json
 import os
+import requests
+import base64
 from main import generate_opportunity_report
 
 app = Flask(__name__)
@@ -13,19 +15,48 @@ def load_opportunities():
             return json.load(f)
     return []
 
+def push_to_github(content_str, message):
+    token = os.environ.get('GITHUB_PAT')
+    repo = os.environ.get('GITHUB_REPO') # e.g. "user/repo"
+    branch = os.environ.get('GITHUB_BRANCH', 'main')
+
+    if not token or not repo:
+        return False
+        
+    url = f"https://api.github.com/repos/{repo}/contents/opportunities.json"
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    
+    # Get current file info to get the SHA
+    response = requests.get(url, headers=headers, params={"ref": branch})
+    sha = None
+    if response.status_code == 200:
+        sha = response.json().get('sha')
+        
+    encoded_content = base64.b64encode(content_str.encode('utf-8')).decode('utf-8')
+    
+    data = {
+        "message": message,
+        "content": encoded_content,
+        "branch": branch
+    }
+    if sha:
+        data["sha"] = sha
+        
+    put_response = requests.put(url, headers=headers, json=data)
+    return put_response.status_code in [200, 201]
+
 def save_opportunities(opportunities):
     with open(DATA_FILE, 'w') as f:
         json.dump(opportunities, f, indent=2)
     
-    # Regenerate the markdown report
-    # Only include items that are NOT marked as 'deleted'
-    # 'Do' and 'Maybe' items potentially go into different sections or stay?
-    # For now, let's keep all non-deleted items in the report, maybe grouped?
-    # User asked: "if i thumbs down, it will delete from the html and also from the report.md"
-    # So we simply filter out deleted items.
-    
     active_opps = [o for o in opportunities if o.get('status') != 'deleted']
     generate_opportunity_report(active_opps, REPORT_FILE)
+    
+    # Attempt to persist state remotely to avoid Render ephemeral disk loss
+    push_to_github(json.dumps(opportunities, indent=2), "Auto-save UI interactions")
 
 @app.route('/')
 def index():

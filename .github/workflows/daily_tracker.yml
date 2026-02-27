@@ -54,6 +54,7 @@ jobs:
         run: |
           git config user.name "AlphaStream Bot"
           git config user.email "bot@alphastream.dev"
+          git pull --rebase origin main || true
           git add opportunities.json analysis_cache.json todays_report.md opportunity_report.md 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Daily pipeline run: $(date +%Y-%m-%d)"
-          git push
+          git push origin main
