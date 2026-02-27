@@ -6,17 +6,40 @@ Uses table-based layout with inline styles for email client compatibility.
 import json
 import os
 from datetime import datetime
+from supabase import create_client, Client
 
 
 def generate_digest():
-    try:
-        with open('opportunities.json') as f:
-            opps = json.load(f)
-    except FileNotFoundError:
-        print("No opportunities.json found. Skipping digest.")
+    supabase_url = os.environ.get("SUPABASE_URL")
+    supabase_key = os.environ.get("SUPABASE_KEY")
+    supabase: Client = None
+
+    if supabase_url and supabase_key:
+        try:
+            supabase = create_client(supabase_url, supabase_key)
+        except Exception as e:
+            print(f"Error connecting to Supabase: {e}")
+            return
+    else:
+        print("SUPABASE_URL or SUPABASE_KEY missing. Skipping digest.")
         return
 
-    active = [o for o in opps if o.get('status') != 'deleted']
+    try:
+        res = supabase.table("opportunities").select("*").execute()
+    except Exception as e:
+        print(f"Error fetching opportunities from Supabase: {e}")
+        return
+
+    active = []
+    for row in res.data:
+        if row.get('status') == 'deleted':
+            continue
+            
+        opp = row.get('bill_data', {})
+        opp['status'] = row.get('status')
+        opp['seen'] = row.get('seen', False)
+        active.append(opp)
+
     if not active:
         print("No active opportunities. Skipping email.")
         return

@@ -6,6 +6,7 @@ from fetcher import LawFetcher
 from filter import BillFilter
 from analyzer import OpportunityAnalyzer
 from cache import BillCache
+from supabase import create_client, Client
 
 # Configuration defaults
 DEFAULT_KEYWORDS = ["AI", "Artificial Intelligence", "Crypto", "Blockchain", "Privacy", "Environment", "Carbon"]
@@ -32,26 +33,43 @@ def run_tracker(mock_mode=False, output_file="todays_report.md"):
     bill_filter = BillFilter(keywords=DEFAULT_KEYWORDS)
     bill_cache = BillCache()
 
-    # Load previously saved opportunities so we can detect whether we've
-    # found anything genuinely new for the email digest.
-    json_path = os.path.join(os.getcwd(), 'opportunities.json')
+    # Load previously saved opportunities to skip already processed ones
+    supabase_url = os.environ.get("SUPABASE_URL")
+    supabase_key = os.environ.get("SUPABASE_KEY")
+    supabase: Client = None
+    
     old_opps = []
-    if os.path.exists(json_path):
+    if supabase_url and supabase_key:
         try:
-            with open(json_path) as f:
-                old_opps = json.load(f)
-        except Exception:
+            supabase = create_client(supabase_url, supabase_key)
+            result = supabase.table("opportunities").select("*").execute()
+            old_opps = result.data
+        except Exception as e:
+            print(f"Error connecting to Supabase: {e}")
             old_opps = []
+    else:
+        print("Warning: SUPABASE_URL or SUPABASE_KEY not found. Data persistence will be disabled unless mocking.")
 
     preserved = {}       # bills with do/maybe — keep exactly as-is
     dismissed = set()    # bills with deleted — never show again
+    seen_ids = set()     # track what we've seen so we don't count it as a "new" email opportunity
+    
     for old in old_opps:
-        key = (old.get('bill_id', ''), old.get('state', ''))
+        # In Supabase, our ID is "bill_id_state"
+        # We need to map back to (bill_id, state) tuple for matching logic
+        # OR we can just use the bill_data payload
+        payload = old.get('bill_data', {})
+        b_id = payload.get('bill_id', '')
+        state = payload.get('state', '')
+        key = (b_id, state)
+        
         status = old.get('status', '')
         if status in ('do', 'maybe'):
-            preserved[key] = old
+            preserved[key] = payload
         elif status == 'deleted':
             dismissed.add(key)
+        
+        seen_ids.add(key)
 
     # 0. Initialize analyzer once (shared across all batches)
     openai_api_key = os.environ.get("OPENAI_API_KEY")
@@ -102,11 +120,10 @@ def run_tracker(mock_mode=False, output_file="todays_report.md"):
             batch_opportunities = analyzer.analyze_bills(batch_relevant, cache=bill_cache)
             opportunities.extend(batch_opportunities)
 
-            # "Useful for email" = not already user-committed and not deleted.
+            # "Useful for email" = not already tracked in the database
             new_for_email = [
                 opp for opp in batch_opportunities
-                if (opp.get('bill_id', ''), opp.get('state', '')) not in preserved
-                and (opp.get('bill_id', ''), opp.get('state', '')) not in dismissed
+                if (opp.get('bill_id', ''), opp.get('state', '')) not in seen_ids
             ]
             if new_for_email:
                 print(
@@ -146,41 +163,49 @@ def run_tracker(mock_mode=False, output_file="todays_report.md"):
         generate_opportunity_report(opportunities, opportunity_path)
         print(f"Opportunity Analysis generated: {opportunity_path}")
 
-        # RULE: User-classified bills are immutable.
-        #  - "do" / "maybe" bills are ALWAYS kept, even if pipeline doesn't find them again
-        #  - "deleted" bills are NEVER re-added, even if pipeline finds them again
-        #  - Only brand-new, unclassified bills from the pipeline get appended
-
-        # Start with all preserved (do/maybe) bills
-        final = list(preserved.values())
-
-        # Add new pipeline results — only if not already classified
-        for opp in opportunities:
-            key = (opp.get('bill_id', ''), opp.get('state', ''))
-            if key in preserved:
-                continue   # already keeping the user's version
-            if key in dismissed:
-                continue   # user said no, don't bring it back
-            final.append(opp)
-
-        # Also keep deleted entries in the file so we remember the dismissals
-        for old in old_opps:
-            key = (old.get('bill_id', ''), old.get('state', ''))
-            if old.get('status') == 'deleted':
-                final.append(old)
-
         new_count = 0
-        for opp in opportunities:
-            key = (opp.get('bill_id', ''), opp.get('state', ''))
-            if key not in preserved and key not in dismissed:
-                new_count += 1
+        
+        if supabase:
+            for opp in opportunities:
+                b_id = opp.get('bill_id', '')
+                state = opp.get('state', '')
+                key = (b_id, state)
+                
+                if key not in seen_ids:
+                    new_count += 1
+                    
+                # Generate unique ID for Supabase
+                record_id = f"{b_id}_{state}".replace(' ', '_')
+                
+                # We only upsert items that are NOT preserved (do/maybe) or dismissed (deleted)
+                # If they are preserved/dismissed, they exist in DB with user state, we don't want to overwrite that
+                # We use ON CONFLICT to avoid overwriting user state if it exists
+                
+                data = {
+                    "id": record_id,
+                    "bill_data": opp
+                }
+                
+                try:
+                    # In Supabase, to ignore conflicts and not override user status,
+                    # we do an upsert but rely on DB constraints or we simply insert and ignore errors.
+                    # Since python supabase client doesn't have complex ON CONFLICT DO NOTHING natively via easy API,
+                    # we check if it's already in our seen_ids (from DB).
+                    if key not in seen_ids:
+                        supabase.table("opportunities").insert(data).execute()
+                    else:
+                        # Existing item. We could update bill_data but we don't want to touch status/seen/notes.
+                        # For now, let's just skip updating existing records to preserve user state safely.
+                        pass
+                except Exception as e:
+                    print(f"Error saving to database: {e}")
 
-        with open(json_path, 'w') as f:
-            json.dump(final, f, indent=2)
-        print(
-            f"Opportunities JSON saved: {json_path} "
-            f"({len(preserved)} preserved, {len(dismissed)} dismissed, {new_count} new)"
-        )
+            print(
+                f"Opportunities saved to Supabase: "
+                f"({len(preserved)} preserved, {len(dismissed)} dismissed, {new_count} new)"
+            )
+        else:
+            print(f"No Supabase connection. Found {new_count} new opportunities but could not save them.")
 
 def generate_opportunity_report(opportunities, filepath):
     with open(filepath, 'w') as f:

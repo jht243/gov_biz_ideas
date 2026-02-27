@@ -1,62 +1,50 @@
 from flask import Flask, render_template, jsonify, request
 import json
 import os
-import requests
-import base64
+from supabase import create_client, Client
 from main import generate_opportunity_report
 
 app = Flask(__name__)
-DATA_FILE = 'opportunities.json'
 REPORT_FILE = 'opportunity_report.md'
 
-def load_opportunities():
-    if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, 'r') as f:
-            return json.load(f)
-    return []
+# Initialize Supabase
+supabase_url = os.environ.get("SUPABASE_URL")
+supabase_key = os.environ.get("SUPABASE_KEY")
+supabase: Client = None
 
-def push_to_github(content_str, message):
-    token = os.environ.get('GITHUB_PAT')
-    repo = os.environ.get('GITHUB_REPO') # e.g. "user/repo"
-    branch = os.environ.get('GITHUB_BRANCH', 'main')
+if supabase_url and supabase_key:
+    try:
+        supabase = create_client(supabase_url, supabase_key)
+        print("Connected to Supabase")
+    except Exception as e:
+        print(f"Error connecting to Supabase: {e}")
 
-    if not token or not repo:
-        return False
+def get_db_opportunities():
+    if not supabase:
+        print("Supabase client not initialized")
+        return []
+    try:
+        # Fetch all records except those marked deleted
+        # Supabase API usually uses .neq('status', 'deleted') but status could be null
+        # So it's safer to fetch all and filter, or just fetch standard ones.
+        res = supabase.table("opportunities").select("*").execute()
         
-    url = f"https://api.github.com/repos/{repo}/contents/opportunities.json"
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    
-    # Get current file info to get the SHA
-    response = requests.get(url, headers=headers, params={"ref": branch})
-    sha = None
-    if response.status_code == 200:
-        sha = response.json().get('sha')
-        
-    encoded_content = base64.b64encode(content_str.encode('utf-8')).decode('utf-8')
-    
-    data = {
-        "message": message,
-        "content": encoded_content,
-        "branch": branch
-    }
-    if sha:
-        data["sha"] = sha
-        
-    put_response = requests.put(url, headers=headers, json=data)
-    return put_response.status_code in [200, 201]
-
-def save_opportunities(opportunities):
-    with open(DATA_FILE, 'w') as f:
-        json.dump(opportunities, f, indent=2)
-    
-    active_opps = [o for o in opportunities if o.get('status') != 'deleted']
-    generate_opportunity_report(active_opps, REPORT_FILE)
-    
-    # Attempt to persist state remotely to avoid Render ephemeral disk loss
-    push_to_github(json.dumps(opportunities, indent=2), "Auto-save UI interactions")
+        # We need to map the DB structure back to the flat JSON format the UI expects
+        formatted_opps = []
+        for row in res.data:
+            if row.get('status') == 'deleted':
+                continue
+                
+            opp = row.get('bill_data', {})
+            opp['status'] = row.get('status')
+            opp['seen'] = row.get('seen', False)
+            opp['notes'] = row.get('notes', '')
+            formatted_opps.append(opp)
+            
+        return formatted_opps
+    except Exception as e:
+        print(f"Error reading from Supabase: {e}")
+        return []
 
 @app.route('/')
 def index():
@@ -64,23 +52,29 @@ def index():
 
 @app.route('/api/opportunities', methods=['GET'])
 def get_opportunities():
-    opps = load_opportunities()
-    # Filter out deleted items for the UI
-    active_opps = [o for o in opps if o.get('status') != 'deleted']
+    active_opps = get_db_opportunities()
     return jsonify(active_opps)
 
 @app.route('/api/mark-seen', methods=['POST'])
 def mark_seen():
-    """Mark all unseen items as seen. Called after user views the dashboard."""
-    opps = load_opportunities()
-    count = 0
-    for o in opps:
-        if o.get('status') != 'deleted' and not o.get('seen'):
-            o['seen'] = True
-            count += 1
-    if count > 0:
-        save_opportunities(opps)
-    return jsonify({"marked": count})
+    """Mark all unseen items as seen directly in the database."""
+    if not supabase:
+        return jsonify({"error": "No database connection"}), 500
+        
+    try:
+        # Get all unseen items
+        res = supabase.table("opportunities").select("id").eq("seen", False).execute()
+        if not res.data:
+            return jsonify({"marked": 0})
+            
+        count = len(res.data)
+        for item in res.data:
+            supabase.table("opportunities").update({"seen": True}).eq("id", item["id"]).execute()
+            
+        return jsonify({"marked": count})
+    except Exception as e:
+        print(f"Error marking seen: {e}")
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/api/action', methods=['POST'])
 def handle_action():
@@ -89,28 +83,22 @@ def handle_action():
     state = data.get('state')
     action = data.get('action') # 'do', 'maybe', 'delete'
     
-    if not all([bill_id, state, action]):
-        return jsonify({"error": "Missing data"}), 400
+    if not all([bill_id, state, action]) or not supabase:
+        return jsonify({"error": "Missing data or DB connection"}), 400
         
-    opportunities = load_opportunities()
-    updated = False
+    record_id = f"{bill_id}_{state}".replace(' ', '_')
     
-    for opp in opportunities:
-        if opp.get('bill_id') == bill_id and opp.get('state') == state:
-            if action == 'delete':
-                opp['status'] = 'deleted'
-            elif action == 'do':
-                opp['status'] = 'do'
-            elif action == 'maybe':
-                opp['status'] = 'maybe'
-            updated = True
-            break
-            
-    if updated:
-        save_opportunities(opportunities)
+    try:
+        supabase.table("opportunities").update({"status": action}).eq("id", record_id).execute()
+        
+        # Optionally regenerate report if we had a background worker
+        # But we'll skip generating flat files in the server right now
+        # since we are moving away from local file states.
+        
         return jsonify({"success": True})
-    else:
-        return jsonify({"error": "Opportunity not found"}), 404
+    except Exception as e:
+        print(f"Error handling action: {e}")
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/api/notes', methods=['PUT'])
 def save_notes():
@@ -119,17 +107,17 @@ def save_notes():
     state = data.get('state')
     notes = data.get('notes', '')
 
-    if not all([bill_id, state]):
-        return jsonify({"error": "Missing data"}), 400
+    if not all([bill_id, state]) or not supabase:
+        return jsonify({"error": "Missing data or DB connection"}), 400
 
-    opportunities = load_opportunities()
-    for opp in opportunities:
-        if opp.get('bill_id') == bill_id and opp.get('state') == state:
-            opp['notes'] = notes
-            save_opportunities(opportunities)
-            return jsonify({"success": True})
-
-    return jsonify({"error": "Opportunity not found"}), 404
+    record_id = f"{bill_id}_{state}".replace(' ', '_')
+    
+    try:
+        supabase.table("opportunities").update({"notes": notes}).eq("id", record_id).execute()
+        return jsonify({"success": True})
+    except Exception as e:
+        print(f"Error saving notes: {e}")
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5001))
