@@ -29,11 +29,15 @@ jobs:
         env:
           OPENSTATES_API_KEY: ${{ secrets.OPENSTATES_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: python3 main.py 2>&1 | tee pipeline_output.txt
       
       - name: Generate email digest
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: python3 email_digest.py
       
       - name: Send email notification
